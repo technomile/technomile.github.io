@@ -137,7 +137,7 @@ ul.navbar-nav li {
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <h1>Setup</h1>
+      <h1>WordPress & MySQL Setup</h1>
       <!--<hr/>-->
       <h2>Deploying to Heroku using the Heroku Button</h2>
       <p>You can deploy your own version of WordPress in seconds using the Heroku button below:</p>
@@ -170,7 +170,7 @@ heroku create
         <li>
           <p>Install the New Relic plugin </p>
           <div class="highlight">
-            <pre><code class="language-text" data-lang="text">heroku addons:add newrelic:stark
+            <pre><code class="language-text" data-lang="text">heroku addons:add newrelic:wayne
 </code></pre>
           </div>
         </li>
@@ -197,9 +197,6 @@ heroku create
                 <pre><code class="language-text" data-lang="text">heroku open
 </code></pre>
               </div>
-            </li>
-            <li>
-              <p>Create  admin username and password, Email Address and Site name.</p>
             </li>
           </ul>
         </li>
@@ -240,10 +237,116 @@ npm install
           <p>Run the application</p>
           <ul>
             <li>Open a browser and access the following URL: <a href="http://localhost:5000">http://localhost</a></li>
-            <li>Create  admin username and password, Email Address and Site name.</li>
           </ul>
         </li>
       </ol>
+      
+      <br/>
+    
+      <h1>WordPress & PostgreSQL Setup</h1>
+      <!--<hr/>-->
+      <h2>Deploying to Heroku using the Heroku Button</h2>
+      <p>You can deploy your own version of WordPress in seconds using the Heroku button below:</p>
+      <p><a target="_blank" href="https://heroku.com/deploy?template=https://github.com/technomile/Heroku-WordPress-PostgreSQL"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
+      <h2>Deploying to Heroku using the Command Line</h2>
+      <p>You can also deploy WordPress to Heroku using the command line:</p>
+      <ol>
+        <li>
+          <p>Clone the repository</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-WordPress-PostgreSQL
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Create a Heroku application</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">cd wordpress
+heroku create
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Install the Heroku Postgres plugin </p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">heroku addons:add heroku-postgresql:hobby-dev
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Install the New Relic plugin </p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">heroku addons:add newrelic:wayne
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Install the SendGrid plugin </p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">heroku addons:add sendgrid:starter
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Deploy to Heroku</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git push heroku master
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Run the the application:</p>
+          <ul>
+            <li>
+              <p>Open the application in a browser:</p>
+              <div class="highlight">
+                <pre><code class="language-text" data-lang="text">heroku open
+</code></pre>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <h2>Installing a Local Version</h2>
+      <p>You can also install WordPress on your local machine:</p>
+      <ol>
+        <li>
+          <p>Clone the repository</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-WordPress-PostgreSQL
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Install the server dependencies</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">cd wordpress
+npm install
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Create a local database</p>
+          <ul>
+            <li>Install and start PostgreSQL on your local machine</li>
+            <li>Create a database called <strong>wordpress</strong></li>
+          </ul>
+        </li>
+        <li>
+          <p>Start the server </p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">wamp/xampp server
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Run the application</p>
+          <ul>
+            <li>Open a browser and access the following URL: <a href="http://localhost:5000">http://localhost</a></li>
+          </ul>
+        </li>
+      </ol>
+
     </div>
   </div>
 </div>

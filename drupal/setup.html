@@ -139,7 +139,7 @@ ul.navbar-nav  li{ margin:0 !important;}
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-        <h1>Setup</h1>
+        <h1>Drupal &amp; MySQL Setup</h1>
         <!--<hr/>-->
         <h2>Deploying to Heroku using the Heroku Button</h2>
 
@@ -156,14 +156,16 @@ ul.navbar-nav  li{ margin:0 !important;}
 <div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-Drupal
 </code></pre></div></li>
 <li><p>Create a Heroku application</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cd Drupal
+<div class="highlight">
+  <pre><code class="language-text" data-lang="text">cd drupal
 heroku create
 </code></pre></div></li>
 <li><p>Install the ClearDB plugin    </p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add cleardb:ignite
 </code></pre></div></li>
 <li><p>Install the New Relic plugin    </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add newrelic:stark
+<div class="highlight">
+  <pre><code class="language-text" data-lang="text">heroku addons:add newrelic:wayne
 </code></pre></div></li>
 <li><p>Install the SendGrid plugin    </p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add sendgrid:starter
@@ -177,8 +179,6 @@ heroku create
 <li><p>Open the application in a browser:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">heroku open
 </code></pre></div></li>
-<li>
-  <p>Create  admin username and password, Email Address and Site name.</p></li>
 </ul>
 </li>
 </ol>
@@ -193,14 +193,14 @@ heroku create
 </code></pre></div></li>
 <li><p>Install the server dependencies</p>
 <div class="highlight">
-  <pre><code class="language-text" data-lang="text">cd Drupal
+  <pre><code class="language-text" data-lang="text">cd drupal
 npm install
 </code></pre></div></li>
 <li><p>Create a local database</p>
 
 <ul>
 <li>Install and start MySQL on your local machine</li>
-<li>Create a database called <strong>Drupal</strong></li>
+<li>Create a database called <strong>drupal</strong></li>
 </ul></li>
 <li><p>Start the server    </p>
 <div class="highlight">
@@ -211,9 +211,84 @@ npm install
 <ul>
 <li>Open a browser and access the following URL:
 <a href="http://localhost:5000">http://localhost</a></li>
-<li>Create  admin username and password, Email Address and Site name.</li>
 </ul></li>
 </ol>
+
+<br/>
+        <h1>Drupal &amp; PostgreSQL Setup</h1>
+        <!--<hr/>-->
+        <h2>Deploying to Heroku using the Heroku Button</h2>
+
+<p>You can deploy your own version of Drupal in seconds using the Heroku button below:</p>
+
+<p><a href="https://heroku.com/deploy?template=https://github.com/technomile/Heroku-Drupal-PostgreSQL"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
+
+<h2>Deploying to Heroku using the Command Line</h2>
+
+<p>You can also deploy Drupal to Heroku using the command line:</p>
+
+<ol>
+<li><p>Clone the repository</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-Drupal-PostgreSQL
+</code></pre></div></li>
+<li><p>Create a Heroku application</p>
+<div class="highlight">
+  <pre><code class="language-text" data-lang="text">cd drupal
+heroku create
+</code></pre></div></li>
+<li><p>Install the Heroku Postgres plugin    </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add heroku-postgresql:hobby-dev
+</code></pre></div></li>
+<li><p>Install the New Relic plugin    </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add newrelic:wayne
+</code></pre></div></li>
+<li><p>Install the SendGrid plugin    </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add sendgrid:starter
+</code></pre></div></li>
+<li><p>Deploy to Heroku</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">git push heroku master
+</code></pre></div></li>
+<li><p>Run the the application:</p>
+
+<ul>
+<li><p>Open the application in a browser:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">heroku open
+</code></pre></div></li>
+</ul>
+</li>
+</ol>
+
+<h2>Installing a Local Version</h2>
+
+<p>You can also install Drupal on your local machine:</p>
+
+<ol>
+<li><p>Clone the repository</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-Drupal-PostgreSQL
+</code></pre></div></li>
+<li><p>Install the server dependencies</p>
+<div class="highlight">
+  <pre><code class="language-text" data-lang="text">cd drupal
+npm install
+</code></pre></div></li>
+<li><p>Create a local database</p>
+
+<ul>
+<li>Install and start PostgreSQL on your local machine</li>
+<li>Create a database called <strong>drupal</strong></li>
+</ul></li>
+<li><p>Start the server    </p>
+<div class="highlight">
+  <pre><code class="language-text" data-lang="text">wamp/xampp server
+</code></pre></div></li>
+<li><p>Run the application</p>
+
+<ul>
+<li>Open a browser and access the following URL:
+<a href="http://localhost:5000">http://localhost</a></li>
+</ul></li>
+</ol>
+
 
 
     </div>

@@ -127,7 +127,7 @@ ul.navbar-nav  li{ margin:0 !important;}
         <li><a href="setup.html">Setup</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li> <a target="_blank" href="https://github.com/technomile/Heroku-CakePHP"><img src="../img/icon-github.png" style="border: none;margin: -4px 0;height: 28px;width: 28px;"> GitHub
+        <li> <a target="_blank" href="https://github.com/technomile/Heroku-CakePHP-MySQL"><img src="../img/icon-github.png" style="border: none;margin: -4px 0;height: 28px;width: 28px;"> GitHub
           Project</a> </li>
       </ul>
     </div>
@@ -139,13 +139,13 @@ ul.navbar-nav  li{ margin:0 !important;}
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-        <h1>Setup</h1>
+        <h1>CakePHP &amp; MySQL Setup</h1>
         <!--<hr/>-->
         <h2>Deploying to Heroku using the Heroku Button</h2>
 
 <p>You can deploy your own version of CakePHP in seconds using the Heroku button below:</p>
 
-<p><a href="https://heroku.com/deploy?template=https://github.com/technomile/Heroku-CakePHP"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
+<p><a href="https://heroku.com/deploy?template=https://github.com/technomile/Heroku-CakePHP-MySQL"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
 
 <h2>Deploying to Heroku using the Command Line</h2>
 
@@ -153,17 +153,19 @@ ul.navbar-nav  li{ margin:0 !important;}
 
 <ol>
 <li><p>Clone the repository</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-CakePHP
+<div class="highlight">
+  <pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-CakePHP-MySQL
 </code></pre></div></li>
 <li><p>Create a Heroku application</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cd CakePHP
+<div class="highlight">
+  <pre><code class="language-text" data-lang="text">cd cake-php
 heroku create
 </code></pre></div></li>
 <li><p>Install the ClearDB plugin    </p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add cleardb:ignite
 </code></pre></div></li>
 <li><p>Install the New Relic plugin    </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add newrelic:stark
+<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add newrelic:wayne
 </code></pre></div></li>
 <li><p>Install the SendGrid plugin    </p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add sendgrid:starter
@@ -177,8 +179,6 @@ heroku create
 <li><p>Open the application in a browser:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">heroku open
 </code></pre></div></li>
-<li>
-  <p>Create  admin username and password, Email Address and Site name.</p></li>
 </ul>
 </li>
 </ol>
@@ -189,18 +189,18 @@ heroku create
 
 <ol>
 <li><p>Clone the repository</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-CakePHP
+<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-CakePHP-MySQL
 </code></pre></div></li>
 <li><p>Install the server dependencies</p>
 <div class="highlight">
-  <pre><code class="language-text" data-lang="text">cd CakePHP
+  <pre><code class="language-text" data-lang="text">cd cake-php
 npm install
 </code></pre></div></li>
 <li><p>Create a local database</p>
 
 <ul>
 <li>Install and start MySQL on your local machine</li>
-<li>Create a database called <strong>CakePHP</strong></li>
+<li>Create a database called <strong>cake-php</strong></li>
 </ul></li>
 <li><p>Start the server    </p>
 <div class="highlight">
@@ -211,10 +211,84 @@ npm install
 <ul>
 <li>Open a browser and access the following URL:
 <a href="http://localhost:5000">http://localhost</a></li>
-<li>Create  admin username and password, Email Address and Site name.</li>
 </ul></li>
 </ol>
 
+<br/>
+        <h1>CakePHP &amp; PostgreSQL Setup</h1>
+        <!--<hr/>-->
+        <h2>Deploying to Heroku using the Heroku Button</h2>
+
+<p>You can deploy your own version of CakePHP in seconds using the Heroku button below:</p>
+
+<p><a href="https://heroku.com/deploy?template=https://github.com/technomile/Heroku-CakePHP-PostgreSQL"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
+
+<h2>Deploying to Heroku using the Command Line</h2>
+
+<p>You can also deploy CakePHP to Heroku using the command line:</p>
+
+<ol>
+<li><p>Clone the repository</p>
+<div class="highlight">
+  <pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-CakePHP-PostgreSQL
+</code></pre></div></li>
+<li><p>Create a Heroku application</p>
+<div class="highlight">
+  <pre><code class="language-text" data-lang="text">cd cake-php
+heroku create
+</code></pre></div></li>
+<li><p>Install the Heroku Postgres plugin    </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add heroku-postgresql:hobby-dev
+</code></pre></div></li>
+<li><p>Install the New Relic plugin    </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add newrelic:wayne
+</code></pre></div></li>
+<li><p>Install the SendGrid plugin    </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add sendgrid:starter
+</code></pre></div></li>
+<li><p>Deploy to Heroku</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">git push heroku master
+</code></pre></div></li>
+<li><p>Run the the application:</p>
+
+<ul>
+<li><p>Open the application in a browser:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">heroku open
+</code></pre></div></li>
+</ul>
+</li>
+</ol>
+
+<h2>Installing a Local Version</h2>
+
+<p>You can also install CakePHP on your local machine:</p>
+
+<ol>
+<li><p>Clone the repository</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-CakePHP-PostgreSQL
+</code></pre></div></li>
+<li><p>Install the server dependencies</p>
+<div class="highlight">
+  <pre><code class="language-text" data-lang="text">cd cake-php
+npm install
+</code></pre></div></li>
+<li><p>Create a local database</p>
+
+<ul>
+<li>Install and start PostgreSQL on your local machine</li>
+<li>Create a database called <strong>cake-php</strong></li>
+</ul></li>
+<li><p>Start the server    </p>
+<div class="highlight">
+  <pre><code class="language-text" data-lang="text">wamp/xampp server
+</code></pre></div></li>
+<li><p>Run the application</p>
+
+<ul>
+<li>Open a browser and access the following URL:
+<a href="http://localhost:5000">http://localhost</a></li>
+</ul></li>
+</ol>
 
     </div>
   </div>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="../img/favicon.ico">
+<title>TechnoMile |  Heroku Buildpack for Magento | Architechture</title>
+
+<!-- Bootstrap core CSS -->
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<!-- <link href="css/styles.css" rel="stylesheet">-->
+<!-- Just for debugging purposes. Don't actually copy this line! -->
+<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+<style>
+@font-face {
+	font-family: 'ProximaNovaRegular';
+	src: url('../fonts/ProximaNova/proximanova-reg-webfont.eot');
+	src: url('../fonts/ProximaNova/proximanova-reg-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova/proximanova-reg-webfont.woff') format('woff'), url('../fonts/ProximaNova/proximanova-reg-webfont.ttf') format('truetype'), url('../fonts/ProximaNova/proximanova-reg-webfont.svg#ProximaNovaRegular') format('svg');
+	font-weight: normal;
+	font-style: normal
+}
+@font-face {
+	font-family: 'ProximaNovaLight';
+	src: url('../fonts/ProximaNova/proximanova-light-webfont.eot');
+	src: url('../fonts/ProximaNova/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova/proximanova-light-webfont.woff') format('woff'), url('../fonts/ProximaNova/proximanova-light-webfont.ttf') format('truetype'), url('../fonts/ProximaNova/proximanova-light-webfont.svg#ProximaNovaLight') format('svg');
+	font-weight: normal;
+	font-style: normal
+}
+@font-face {
+	font-family: 'ProximaNovaSemiBold';
+	src: url('../fonts/ProximaNova/proximanova-sbold-webfont.eot');
+	src: url('../fonts/ProximaNova/proximanova-sbold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova/proximanova-sbold-webfont.woff') format('woff'), url('../fonts/ProximaNova/proximanova-sbold-webfont.ttf') format('truetype'), url('../fonts/ProximaNova/proximanova-sbold-webfont.svg#ProximaNovaSemiBold') format('svg');
+	font-weight: normal;
+	font-style: normal
+}
+body {
+	font: 16px ProximaNovaRegular, Arial, sans-serif;
+}
+.jumbotron {
+	background: #262626;
+	padding: 0px !important;
+}
+.navbar {
+	margin-bottom: 0px
+}
+.datacontainer {
+	background: rgb(238,238,238); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjY2NjY2MiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(238,238,238,1)), color-stop(100%, rgba(204,204,204,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc', GradientType=0 ); /* IE6-8 */
+	padding: 10px;
+	text-align: center;
+	-webkit-box-shadow: -11px 5px 11px -2px rgba(0,0,0,0.07);
+	-moz-box-shadow: -11px 5px 11px -2px rgba(0,0,0,0.07);
+	box-shadow: -11px 5px 11px -2px rgba(0,0,0,0.07);
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	margin-bottom: 15px;
+	min-height: 346px;
+}
+.hbtn {
+	border: 4px solid #BDB6D2;
+	border-radius: 11px;
+}
+.datacontainer h3 {
+	text-shadow: 2px 1px 4px #969696;
+}
+h2 {
+	font-family: 'ProximaNovaSemiBold';
+	font-size: 24px;
+	border-bottom: solid 1px #EEE;
+	padding-bottom: 12px;
+	margin-bottom: 20px;
+	margin-top: 40px;
+}
+h1 {
+	font-family: 'ProximaNovaSemiBold';
+	font-size: 32px;
+	font-weight: 400;
+	margin-bottom: 16px;
+}
+ul li {
+	margin: 0 0 10px;
+}
+ul.navbar-nav li {
+	margin: 0 !important;
+}
+</style>
+</head>
+
+<body>
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="index.html">Magento</a> </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="features.html">Features</a></li>
+        <li><a href="architecture.html">Architecture</a></li>
+        <li><a href="setup.html">Setup</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li> <a target="_blank" href="https://github.com/technomile/Heroku-Magento"><img src="../img/icon-github.png" style="border: none;margin: -4px 0;height: 28px;width: 28px;"> GitHub
+          Project</a> </li>
+      </ul>
+    </div>
+    <!--/.nav-collapse --> 
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1>Architecture</h1>
+      <!--<hr/>-->
+      <p><img src="../img/magento_arch.jpg" style="width:100%" alt="alt tag"></p>
+      <h2>Client-Side (Consumer App)</h2>
+      <p>The consumer app is a multi-platform hybrid application. It runs on iOS, Android, Windows Phone, etc.</p>
+      <h2>Client-Side (Employee-Facing)</h2>
+      <p>Users can manage the ecommerce data like customers, products &amp; orders in Magento in the browser and also from Salesforce.</p>
+      <h2>Server-Side</h2>
+      <p>The server-side of the consumer app runs on Heroku and is built with <a title="Magento" href="http://www.magento.com/" target="_blank">Magento</a>.</p>
+      <h2>User Management</h2>
+      <ul>
+        <li>User can sign up and create an account in the website.</li>
+        <li>User passwords are hashed with bcrypt using a per-user salt.</li>
+      </ul>      
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div id="footer">
+    <p class="text-muted">TechnoMile, 2015.</p>
+  </div>
+  <!-- Site footer --> 
+</div>
+<script src="../js/jquery.js"></script> 
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

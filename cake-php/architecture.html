@@ -7,7 +7,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="shortcut icon" href="../img/favicon.ico">
-<title>TechnoMile | Heroku Buildpack for Drupal</title>
+<title>TechnoMile |  Heroku Buildpack for CakePHP | Architechture</title>
 
 <!-- Bootstrap core CSS -->
 <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -54,8 +54,7 @@ body {
 	font: 16px ProximaNovaRegular, Arial, sans-serif;
 }
 .jumbotron {
-	/*background: #262626;*/
-	background: #59498a;
+	background: #262626;
 	padding: 0px !important;
 }
 .navbar {
@@ -120,7 +119,7 @@ ul.navbar-nav li {
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="index.html">Drupal</a> </div>
+      <a class="navbar-brand" href="index.html">CakePHP</a> </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li><a href="features.html">Features</a></li>
@@ -128,107 +127,59 @@ ul.navbar-nav li {
         <li><a href="setup.html">Setup</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li> <a target="_blank" href="https://github.com/technomile/Heroku-Drupal"><img src="../img/icon-github.png" style="border: none;margin: -4px 0;height: 28px;width: 28px;"> GitHub
+        <li> <a target="_blank" href="https://github.com/technomile/Heroku-CakePHP"><img src="../img/icon-github.png" style="border: none;margin: -4px 0;height: 28px;width: 28px;"> GitHub
           Project</a> </li>
       </ul>
     </div>
     <!--/.nav-collapse --> 
   </div>
 </div>
-<div class="jumbotron">
-  <div class="container">
-    <div class="row" style="text-align: center"> <a href="http://www.technomile.com"><img src="../img/heroku_drupal.jpg" style="border:none; width:100%"/> </a>
-      <!--<h1>The standard Lorem Ipsum passage, used since the 1500s</h1>--> 
-    </div>
-  </div>
-</div>
-<div style="background-color: #f4f4f4;margin-top: -30px;border-bottom: solid 1px #ddd;padding:12px 0 6px 0;margin-bottom:30px;">
-  <div class="container">
-    <div class="row" style="text-align: center">
-      <div style="margin-left: 30px;"><a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-url="http://technomile.github.io/drupal/" data-text="TechnoMile created a sample website that demonstrates how to build customer blog with Drupal. #heroku #cleardb #newrelic #sendgrid">Tweet</a></div>
-    </div>
-  </div>
-</div>
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <p><a href="http://www.technomile.com" title="TechnoMile" target="_blank">TechnoMile</a> created a sample website that demonstrates how to build customer blog with <a title="Heroku" href="https://www.drupal.org/" target="_blank">Drupal</a>.</p>
-      <br>
-       <div class="row">
-      <div class="col-lg-3">
-      <a href="http://heroku-drupal-mysql.herokuapp.com/" target="_blank">
-      <img src="../img/demo3.jpg" width="100%"/>
-      </a>
-      </div>
-      <div class="col-lg-9">
-      <p>You can deploy your own version of Drupal with MySQL on Heroku in seconds using the Heroku button below:</p>
-      <a target="_blank" href="https://heroku.com/deploy?template=https://github.com/technomile/Heroku-Drupal"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a><BR/>
-      </p>
-      <p>You can see a live demo at <a title="Heroku Drupal MySQL" href="http://heroku-drupal-mysql.herokuapp.com/" target="_blank" data-mce-href="http://heroku-drupal-mysql.herokuapp.com">Heroku Drupal MySQL</a></p>
+      <h1>Architecture</h1>
+      <!--<hr/>-->
+      <p><img src="../img/cakephp_arch.jpg" style="width:100%" alt="alt tag"></p>
+      <h2>Client-Side (Consumer App)</h2>
+      <p>The consumer app is a multi-platform hybrid application. It runs on iOS, Android, Windows Phone, etc.</p>
+      <h2>Client-Side (Employee-Facing)</h2>
+      <p>Users can manage the salesforce data in CakePHP in the browser</p>
+      <h2>Server-Side</h2>
+      <p>The server-side of the consumer app runs on Heroku and is built with <a title="CakePHP" href="https://www.cakephp.org/" target="_blank">CakePHP</a>.</p>
       
-      </div>
-      </div>
-       <div class="col-lg-12" style="height:35px"> </div>
-       
-       <div class="row">
-      <div class="col-lg-3">
-      <a href="http://heroku-drupal-postgresql.herokuapp.com/" target="_blank">
-      <img src="../img/demo3.jpg" width="100%"/>
-      </a>
-      </div>
-      <div class="col-lg-9">
-      <p>You can deploy your own version of Drupal with PostgreSQL on Heroku in seconds using the Heroku button below:</p>
-      <a target="_blank" href="https://heroku.com/deploy?template=https://github.com/technomile/Heroku-Drupal-PostgreSQL"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a><BR/>
-      </p>
-      <p>You can see a live demo at <a title="Heroku Drupal MySQL" href="http://heroku-drupal-postgresql.herokuapp.com/" target="_blank" data-mce-href="http://heroku-drupal-mysql.herokuapp.com">Heroku Drupal PostgreSQL</a></p>
+      <h2>Salesforce Integration with Heroku Connect</h2>
+
+        <p>The application data is maintained in Salesforce. Heroku Connect synchronizes the Salesforce data with a Postgres database running in Heroku.</p>
+        
+        <p>Heroku Connect synchronizes the following Salesforce objects:</p>
+        
+        <ul>
+        <li>Account (Bidirectional sync)</li>
+        <li>Contact (Bidirectional sync)</li>
+        <li>Product2 (Bidirectional sync)</li>
+        <li>PriceBook (Bidirectional sync)</li>
+        <li>Opportunity (Bidirectional sync)</li>
+        <li>Opportunity Line Item (Bidirectional sync)</li>
+        </ul>
+        
+        <p>Using Heroku Connect:</p>
+        
+        <ul>
+        <li>Consumers access the application data in Postgres through the application's own REST services </li>
+        <li>Developers write the data data access layer using SQL against the Postgres database</li>
+        <li>The data is kept in sync using Connect's bi-directional data synchronization</li>
+        </ul>
+        
+        <p><a href="https://www.heroku.com/connect">Learn more</a> about Heroku Connect.</p>
       
-      </div>
-      </div>
-       <div class="col-lg-12" style="height:35px"> </div>
-      
-      
-      
-      
-      <p><a title="Heroku" href="https://www.heroku.com/" target="_blank">Heroku</a> provides the tools and services you need to build and deploy customer-facing applications without having to worry about infrastructure.</p>
-           
-      <p><a title="Drupal" href="https://www.drupal.org/" target="_blank">Drupal</a> is a free software package that allows you to easily organize, manage and publish your content, with an endless variety of customization. Use Drupal to build everything from personal blogs to enterprise applications. From local businesses to global corporations, diverse organizations use Drupal. The application includes a content management platform and a development framework.<br/>    
-      </p>
+      <h2>User Management</h2>
+      <ul>
+        <li>User can sign up and create an account in the website.</li>
+        <li>User passwords are hashed with bcrypt using a per-user salt.</li>
+      </ul>
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="row" style="padding-top: 4px;"> 
-  <a title="Heroku" href="https://devcenter.heroku.com/articles/sendgrid/" style="color: #333;" target="_blank">
-    <div class="col-lg-4">
-      <div class="datacontainer">
-        <div class="text-center"> <img src="../img/sendgrid.png"/>
-          <h3>SendGrid</h3>
-        </div>
-        <p>SendGrid's cloud-based email infrastructure relieves businesses of the cost and complexity of maintaining custom email systems. SendGrid provides reliable delivery, scalability and real-time analytics along with flexible APIs that make custom integration a breeze.</p>
-      </div>
-    </div>
-    </a> <a title="ClearDB" href="https://devcenter.heroku.com/articles/cleardb" style="color: #333;" target="_blank">
-    <div class="col-lg-4">
-      <div class="datacontainer">
-        <div class="text-center"> <img src="../img/cleardb.png"/>
-          <h3>ClearDB</h3>
-        </div>
-        <p>ClearDB is a powerful, fault tolerant database-as-a-service in the cloud for MySQL powered applications.</p>
-      </div>
-    </div>
-    </a> <a title="New Relic" href="https://devcenter.heroku.com/articles/newrelic/" style="color: #333;" target="_blank">
-    <div class="col-lg-4">
-      <div class="datacontainer">
-        <div class="text-center"> <img src="../img/newrelic.png"/>
-          <h3>New Relic</h3>
-        </div>
-        <p>New Relic pinpoint and solve PHP application performance issues down to the line of code. New Relic APM is the only tool you’ll need to see everything in your PHP application—from the end user experience to server monitoring. Trace problems down to slow database queries, slow 3rd party APIs and web services, caching layers, and more.</p>
-      </div>
-    </div>
-    </a>
-  </div>
-</div>
-<div class="container"> </div>
 <div class="container">
   <div id="footer">
     <p class="text-muted">TechnoMile, 2015.</p>

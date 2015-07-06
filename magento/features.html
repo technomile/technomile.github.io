@@ -139,6 +139,8 @@ ul.navbar-nav li {
         <li>
           <p>Customer Update from Magento to Salesforce through Front End.</p>
         </li>
+        <!--<li><p>Customer which are got sync , Can be checked in Admin customer edit Page and by clicking on the link, can directly redirect to Salesforce Particular customer details.</p></li>-->
+        <!--<li><p>Magento to Salesforce Customer Update from Magento Front End.</p></li>-->
         <li>
           <p>Customer Creation with Same Billing &amp; Shipping Addresses from Magento Back End.</p>
         </li>
@@ -151,9 +153,12 @@ ul.navbar-nav li {
         <li>
           <p>Customer Creation with same Billing &amp; Shipping Addresses from Magento Front End.</p>
         </li>
+        <li><p>Registered Customer will get Sync to Salesforce.</p></li>
         <li>
-          <p>Registered Customer will get Sync to Salesforce.</p>
+          <p>Group types Customer will sync to Salesforce as Registered Customer.</p>
         </li>
+        <!--<li><p>Customer creation with offline sync</p></li>-->
+        <!--<li><p>Note(Billing and shipping address will get changed from front end, Only if we changed or re save Customer)</p></li>-->
       </ul>
       <br>
       <h3>Salesforce To Magento</h3>
@@ -183,43 +188,43 @@ ul.navbar-nav li {
       <br>
       <ul>
         <li>
-          <p>Name: is account name in Salesforce and customer name in Magento .</p>
+          <p><strong>Name:</strong> is account name in Salesforce and customer name in Magento .</p>
         </li>
         <li>
-          <p>Type: is the account type in Salesforce. When customer is registered then type should be 'Registered - Ecommerce' and when customer is placed order then type should be 'Customer - Ecommerce'.</p>
+          <p><strong>Type:</strong> is the account type in Salesforce. When customer is registered then type should be 'Registered - Ecommerce' and when customer is placed order then type should be 'Customer - Ecommerce'.</p>
         </li>
         <li>
-          <p>Billing Street: Billing Street is Magento Billing Street Address.</p>
+          <p><strong>Billing Street:</strong> Billing Street is Magento Billing Street Address.</p>
         </li>
         <li>
-          <p>Billing City: Billing City is Magento Accounts Billing City.</p>
+          <p><strong>Billing City:</strong> Billing City is Magento Accounts Billing City.</p>
         </li>
         <li>
-          <p>Billing State: Billing State is Magento account billing state.</p>
+          <p><strong>Billing State:</strong> Billing State is Magento account billing state.</p>
         </li>
         <li>
-          <p>Billing Country: Billing Country is accounts Billing Country in Magento.</p>
+          <p><strong>Billing Country:</strong> Billing Country is accounts Billing Country in Magento.</p>
         </li>
         <li>
-          <p>ZipPostal Code: Magento billing Postal code.</p>
+          <p><strong>ZipPostal Code:</strong> Magento billing Postal code.</p>
         </li>
         <li>
-          <p>Shipping Street: Shipping Street is Magento Shipping Street Address.</p>
+          <p><strong>Shipping Street:</strong> Shipping Street is Magento Shipping Street Address.</p>
         </li>
         <li>
-          <p>Shipping City: Shipping City is Magento Customer Shipping City.</p>
+          <p><strong>Shipping City:</strong> Shipping City is Magento Customer Shipping City.</p>
         </li>
         <li>
-          <p>Shipping State: Shipping State is Magento Customer shipping state.</p>
+          <p><strong>Shipping State:</strong> Shipping State is Magento Customer shipping state.</p>
         </li>
         <li>
-          <p>Shipping Country: Shipping Country is Customer Shipping Country in Magento.</p>
+          <p><strong>Shipping Country:</strong> Shipping Country is Customer Shipping Country in Magento.</p>
         </li>
         <li>
-          <p>ZipPostal Code: ZipPostal Code is Magento shipping Postal Code.</p>
+          <p><strong>ZipPostal Code:</strong> ZipPostal Code is Magento shipping Postal Code.</p>
         </li>
         <li>
-          <p>Phone Number: Salesforce Billing and shipping Addresses Phone Number in Magento.</p>
+          <p><strong>Phone Number:</strong> Salesforce Billing and shipping Addresses Phone Number in Magento.</p>
         </li>
       </ul>
       <br>
@@ -228,36 +233,41 @@ ul.navbar-nav li {
       <h3>Magento To Salesforce</h3>
       <br>
       <ul>
-        <li>Product Created with Simple Type will get sync to Salesforce.</li>
-        <li>Simple Product Update from Magento to Salesforce.</li>
-        <li>By default Product type will be Family type in Salesforce.</li>
+        <li><p>Product Created with Simple Type will get sync to Salesforce.</p></li>
+        <li><p>Simple Product Update from Magento to Salesforce.</p></li>
+        <li><p>By default Product type will be Family type in Salesforce.</p></li>
+        <!--<li><p>If backorder is 0, it will Place backorder as ‘No back orders’ in salesforce.</p></li>
+        <li><p>If backorder is 1, it will Place backorder as ‘Allow Quantity below 0’ in salesforce.</p></li>
+        <li><p>If backorder is 2, it will Place backorder as ‘Allow Quantity below 0 and Notify Customer’ in salesforce.</p></li>-->
+        <!--<li><p>Offline Product creation</p></li>-->
       </ul>
       <br>
       <h3>Salesforce To Magento</h3>
       <br>
       <ul>
-        <li>Product Created in Salesforce will get sync to Magento.</li>
-        <li>Product Updated in Salesforce will update the Product in Magento.</li>
-        <li>Tax ID is configured in Magento Configuration based on client selection Tax Id will be process for Product.</li>
-        <li>Product Status is configured in Magento Configuration based on client selection Tax Id will be process for Product.</li>
-        <li>By Default all the product which will sync to Magento from Salesforce will have visibility ‘Catalog, Search’.</li>
-        <li>No weight is provided in salesforce than it will take 1 as default.</li>
-        <li>By default all the Product will get sync to Salesforce as a simple Product.</li>
+        <li><p>Product Created in Salesforce will get sync to Magento.</p></li>
+        <li><p>Product Updated in Salesforce will update the Product in Magento.</p></li>
+        <li><p>Tax ID is configured in Magento Configuration based on client selection Tax Id will be process for Product.</p></li>
+        <li><p>Product Status is configured in Magento Configuration based on client selection Tax Id will be process for Product.</p></li>
+        <li><p>By Default all the product which will sync to Magento from Salesforce will have visibility ‘Catalog, Search’.</p></li>
+        <li><p>No weight is provided in salesforce than it will take 1 as default.</p></li>
+        <li><p>By default all the Product will get sync to Salesforce as a simple Product.</p></li>
       </ul>
       <br>
       <h3>Below are the attributes will get sync to Salesforce and Magento.</h3>
       <ul>
-        <li>Name: is product name in Magento.</li>
-        <li>Product Model: is SKU in Magento.</li>
-        <li>Description: is Magento Description.</li>
-        <li>Short Description: is Short Description in Magento.</li>
-        <li>Price: is Magento product price.</li>
-        <li>Product Type: is Magento product type;</li>
-        <li>Active: is Magento product Active or Inactive.</li>
-        <li>Quantity: is Magento product Quantity.</li>
-        <li>Stock Availability: is Stock Availability in Magento.</li>
-        <li>Tax Class: is Tax Class in Magento.</li>
-        <li>Weight: is Weight in Magento.</li>
+        <li><p><strong>Name:</strong> is product name in Magento.</p></li>
+        <li><p><strong>Product Model:</strong> is SKU in Magento.</p></li>
+        <li><p><strong>Description:</strong> is Magento Description.</p></li>
+        <li><p><strong>Short Description:</strong> is Short Description in Magento.</p></li>
+        <li><p><strong>Price:</strong> is Magento product price.</p></li>
+        <li><p><strong>Product Type:</strong> is Magento product type;</p></li>
+        <li><p><strong>Weight:</strong> is Weight in Magento.</p></li>
+        <li><p><strong>Tax Class:</strong> is Tax Class in Magento.</p></li>
+        <li><p><strong>Quantity:</strong> is Magento product Quantity.</p></li>
+        <li><p><strong>Stock Availability:</strong> is Stock Availability in Magento.</p></li>
+        <!--<li><p><strong>Backorder:</strong> is Backorder in Magento.</p></li>-->
+        <li><p><strong>Active:</strong> is Magento product Active or Inactive.</p></li>
       </ul>
       <br>
       <h2>Order Module</h2>
@@ -277,6 +287,9 @@ ul.navbar-nav li {
         <li>
           <p>Order Creation with Registered Customer from Magento Backend with different Billing and Shipping Addresses.</p>
         </li>
+        
+       <!-- <li><p>Order Creation with Registered Customer from Magento Backend with Back Order and without Back Order Products.</p></li>
+        <li><p>Order Created with guest check out will sync the order with Customer billing name ,order id and product details not with billing and shipping addresses.</p></li>-->      
         <li>
           <p>Order Creation with new Customer from Magento Front End will get sync.</p>
         </li>
@@ -295,6 +308,7 @@ ul.navbar-nav li {
         <li>
           <p>Order created in Salesforce Closing date will have todays date with +10.</p>
         </li>
+        <!--<li><p>Offline Order creation.</p></li>-->
       </ul>
       <br>
       <h3>Salesforce to Magento</h3>
@@ -310,16 +324,16 @@ ul.navbar-nav li {
           <p>Currency is configured in Magento Configuration based on client selection Currency will be process for Order.</p>
         </li>
         <li>
-          <p>No shipping Method will get sync to Magento</p>
+          <p>No shipping Method will get sync to Magento.</p>
         </li>
         <li>
-          <p>Payment Method will be Purchase Order</p>
+          <p>Payment Method will be Purchase Order.</p>
         </li>
         <li>
-          <p>No Order will get Sync to Magento , If Particular customer and Product doesn&rsquo;t exist in Magento</p>
+          <p>No Order will get Sync to Magento , If Particular customer and Product doesn&rsquo;t exist in Magento.</p>
         </li>
         <li>
-          <p>Order created in Magento by default it will have status as processing</p>
+          <p>Order created in Magento by default it will have status as processing.</p>
         </li>
       </ul>
       <br>
@@ -327,22 +341,25 @@ ul.navbar-nav li {
       <br>
       <ul>
         <li>
-          <p>Name: Order Name</p>
+          <p><strong>Name:</strong> Order Name.</p>
         </li>
         <li>
-          <p>Status: Order status.</p>
+          <p><strong>Status:</strong> Order status.</p>
         </li>
         <li>
-          <p>Total Qty: NO of product</p>
+          <p><strong>Amount:</strong> Order Amount.</p>
         </li>
         <li>
-          <p>Web: Source from where order is place</p>
+          <p><strong>Total Qty:</strong> NO of product.</p>
         </li>
         <li>
-          <p>Close date: Order Close Date</p>
+          <p><strong>Web:</strong> Source from where order is place.</p>
         </li>
         <li>
-          <p>Order Number: Magento order Id</p>
+          <p><strong>Close date:</strong> Order Close Date.</p>
+        </li>
+        <li>
+          <p><strong>Order Number:</strong> Magento order Id.</p>
         </li>
       </ul>
       <br>
@@ -352,7 +369,7 @@ ul.navbar-nav li {
       <br>
       <ul>
         <li>Abandon or cart Product will get sync to Salesforce.</li>
-        <li>Abandoned Product sync to Salesforce will have status prospecting</li>
+        <li>Abandoned Product sync to Salesforce will have status prospecting.</li>
         <li>Abandon Product will consist the details of customer and Product.</li>
       </ul>
       <br>
@@ -362,24 +379,24 @@ ul.navbar-nav li {
       <br>
       <ul>
         <li>Magento contact us information will get sync to Salesforce as a Lead.</li>
-        <li>Leads will get sync to Magento to Salesforce only</li>
+        <li>Leads will get sync to Magento to Salesforce only.</li>
         </li>
       </ul>
       <br>
-      <h3>Below are the attributes will get sync to Salesforce and Magento</h3>
+      <h3>Below are the attributes will get sync to Salesforce and Magento.</h3>
       <br>
       <ul>
-        <li>Name: is account name in Magento contact us</li>
-        <li>Email: is contact us Email in Magento</li>
-        <li>Telephone: is Magento contact us Telephone;</li>
-        <li>Comment: is Magento contact us Comment,</li>
-        <li>Website: is the name of the website from which url the lead is getting generate</li>
-        <li>Company: name will be current store name.</li>
+        <li><strong>Name:</strong> is account name in Magento contact us.</li>
+        <li><strong>Email:</strong> is contact us Email in Magento.</li>
+        <li><strong>Telephone:</strong> is Magento contact us Telephone.</li>
+        <li><strong>Comment:</strong> is Magento contact us Comment.</li>
+        <li><strong>Website:</strong> is the name of the website from which url the lead is getting generate.</li>
+        <li><strong>Company:</strong> name will be current store name.</li>
       </ul>
       <br>
       <h2>Newsletter</h2>
       <br>
-      <h3>Magento To Salesforce</h3>
+      <h3>Magento To Salesforce.</h3>
       <br>
       <ul>
         <li>Newsletter subscribe will get sync from Magento to Salesforce through Back End.</li>
@@ -389,7 +406,7 @@ ul.navbar-nav li {
       <br>
       <h2>Visitor Log Info</h2>
       <br>
-      <h3>Magento To Salesforce</h3>
+      <h3>Magento To Salesforce.</h3>
       <br>
       <ul>
         <li>Visitors login/logout date time will get sync to Salesforce.</li>

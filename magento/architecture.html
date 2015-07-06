@@ -143,9 +143,24 @@ ul.navbar-nav li {
       <h2>Client-Side (Consumer App)</h2>
       <p>The consumer app is a multi-platform hybrid application. It runs on iOS, Android, Windows Phone, etc.</p>
       <h2>Client-Side (Employee-Facing)</h2>
-      <p>Users can manage the ecommerce data like customers, products &amp; orders in Magento in the browser and also from Salesforce.</p>
+      <p>Users can manage the ecommerce data (customers, products &amp; orders) in Salesforce in the browser or in the Magento.</p>
       <h2>Server-Side</h2>
-      <p>The server-side of the consumer app runs on Heroku and is built with <a title="Magento" href="http://www.magento.com/" target="_blank">Magento</a>.</p>
+      <p>The server-side of the consumer app runs on Heroku and is built with <a title="Magento" href="http://www.magento.com/" target="_blank">Magento</a>. The server-side application exposes its own SOAP endpoints. The client application gets its data by invoking these SOAP services. These are API calls to your own application, and they count towards Salesforce API limits.</p>
+      <h2>Salesforce Integration with Magento</h2>
+      <p>The application data is maintained in Magento. It synchronizes the Magento data with a Salesforce running in Heroku.</p>
+      <p>It synchronizes the following Salesforce objects:</p>
+      <ul>
+        <li>Account (Bidirectional sync)</li>
+        <li>Contact (Bidirectional sync)</li>
+        <li>Product (Bidirectional sync)</li>
+        <li>Opportunity (Bidirectional sync)</li>
+        <li>Opportunity Contact Roles (Bidirectional sync)</li>
+        <li>Opportunity Line Item (Bidirectional sync)</li>
+        <li>Lead (Magento to Salesforce sync)</li>
+        <li>Case (Magento to Salesforce sync)</li>
+        <li>Newsletter (Magento to Salesforce sync)</li>
+        <li>Visitor Log Info (Magento to Salesforce sync)</li>
+      </ul>
       <h2>User Management</h2>
       <ul>
         <li>User can sign up and create an account in the website.</li>

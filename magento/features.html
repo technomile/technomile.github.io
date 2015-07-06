@@ -50,9 +50,9 @@
 	font-weight: normal;
 	font-style: normal
 }
-
-body{font: 16px ProximaNovaRegular,Arial,sans-serif;}
-
+body {
+	font: 16px ProximaNovaRegular, Arial, sans-serif;
+}
 .jumbotron {
 	background: #262626;
 	padding: 0px !important;
@@ -82,7 +82,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	-o-border-radius: 5px;
 	-ms-border-radius: 5px;
 	margin-bottom: 15px;
-	  min-height: 346px;
+	min-height: 346px;
 }
 .hbtn {
 	border: 4px solid #BDB6D2;
@@ -93,24 +93,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 }
 h2 {
 	font-family: 'ProximaNovaSemiBold';
-  font-size: 24px;
-  border-bottom: solid 1px #EEE;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  margin-top: 40px;
+	font-size: 24px;
+	border-bottom: solid 1px #EEE;
+	padding-bottom: 12px;
+	margin-bottom: 20px;
+	margin-top: 40px;
 }
 h1 {
 	font-family: 'ProximaNovaSemiBold';
-  font-size: 32px;
-  font-weight: 400;
-  margin-bottom: 16px;
+	font-size: 32px;
+	font-weight: 400;
+	margin-bottom: 16px;
 }
-
-ul li{
-  margin: 0 0 10px;
+ul li {
+	margin: 0 0 10px;
 }
-ul.navbar-nav  li{ margin:0 !important;}
-
+ul.navbar-nav li {
+	margin: 0 !important;
+}
 </style>
 </head>
 
@@ -120,9 +120,9 @@ ul.navbar-nav  li{ margin:0 !important;}
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       <a class="navbar-brand" href="index.html">Magento</a> </div>
-        <div class="navbar-collapse collapse">
+    <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li><a href="features.pdf" target="_blank">Features</a></li>
+        <li><a href="features.html"features.html>Features</a></li>
         <li><a href="architecture.html">Architecture</a></li>
         <li><a href="setup.pdf" target="_blank">Setup</a></li>
       </ul>
@@ -134,34 +134,263 @@ ul.navbar-nav  li{ margin:0 !important;}
     <!--/.nav-collapse --> 
   </div>
 </div>
-
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-     <h1>Features</h1>
-     <br>
+      <h1>Features</h1>
+      <br>
+      <h2>Customer Module</h2>
+      <br>
+      <h3>Magento To Salesforce</h3>
+      <br>
       <ul>
-        <li><strong>Analytics and Reporting:</strong>&nbsp; the script is integrated with Google Analytics and offers many different reports.</li>
-        <li><strong>Product Browsing:</strong>&nbsp; multiple images for products, options for extensive reviews, wishlists and much more.</li>
-        <li><strong>Catalog Browsing:</strong>&nbsp; easy navigation, advanced product filtering system, product comparison.</li>
-        <li><strong>Catalog Management:</strong>&nbsp; inventory management, batch import and export of products, different tax rates per location, additional product attributes.</li>
-        <li><strong>Customer Accounts:</strong>&nbsp; order status and history, e-mail and RSS feeds for products in the wishlist, newsletter subscription, default billing and shipping address.</li>
-        <li><strong>Customer Service:</strong>&nbsp; enhanced features for customers' accounts, Contact Us form, comprehensive order tracking and history, customizable order e-mails.</li>
-        <li><strong>Order Management:</strong>&nbsp; create orders through admin area, create multiple invoices shipments and credit memos, call center order creation option.</li>
-        <li><strong>Payment:</strong>&nbsp; different payment methods: credit cards, PayPal, Authorize.net, Google Checkout, checks, money orders, support of external payment modules like Cybersource, ePay, eWAY and many more.</li>
-        <li><strong>Shipping:</strong>&nbsp; shipping to multiple addresses, flat rating shipping, supports UPS, UPS XML (account rates), FedEx (account rates), USPS and DHL.</li>
-        <li><strong>Checkout:</strong>&nbsp; one page checkout, SSL support, checkout without having an account.</li>
-        <li><strong>Search Engine Optimization:</strong>&nbsp; 100% Search Engine Friendly, Google SiteMap support.</li>
-        <li><strong>International Support:</strong>&nbsp; multiple languages and currencies, list of allowed countries for registration, purchasing and shipping, localization.</li>
-        <li><strong>Marketing Promotions and Tools:</strong>&nbsp; coupons, discounts and different promotion options.</li>
-        <li><strong>Site Management:</strong>&nbsp;- control of multiple web sites, multiple languages, tax rate with support for US and International markets, customizable outlook through templates.</li>
+        <li>
+          <p>Customer creation from Magento to Salesforce through Back End (website,admin).</p>
+        </li>
+        <li>
+          <p>Customer creation from Magento to Salesforce through Front End.</p>
+        </li>
+        <li>
+          <p>Customer Update from Magento to Salesforce through Back End (website,admin).</p>
+        </li>
+        <li>
+          <p>Customer Update from Magento to Salesforce through Front End.</p>
+        </li>
+        <li>
+          <p>Customer Creation with Same Billing &amp; Shipping Addresses from Magento Back End.</p>
+        </li>
+        <li>
+          <p>Customer Creation with Different Billing &amp; Shipping Addresses from Magento Back End.</p>
+        </li>
+        <li>
+          <p>Customer Creation with Different Billing &amp; Shipping Addresses from Magento Front End.</p>
+        </li>
+        <li>
+          <p>Customer Creation with same Billing &amp; Shipping Addresses from Magento Front End.</p>
+        </li>
+        <li>
+          <p>Registered Customer will get Sync to Salesforce.</p>
+        </li>
       </ul>
-      <p>&nbsp;</p>
-    
-    </div>
+      <br>
+      <h3>Salesforce To Magento</h3>
+      <br>
+      <ul>
+        <li>
+          <p>Customer Creation from Salesforce to Magento.</p>
+        </li>
+        <li>
+          <p>Customer Update from Salesforce to Magento.</p>
+        </li>
+        <li>
+          <p>Customer having name with no space in Salesforce, Than same name will be last name in Magento .If it's with space than it will be divided as first name and last name.</p>
+        </li>
+        <li>
+          <p>Customer Billing and Shipping address will get sync to Magento.</p>
+        </li>
+        <li>
+          <p>Customer Billing and Shipping address update from Salesforce to Magento.</p>
+        </li>
+        <li>
+          <p>In case of customer having no email id in Salesforce While creating Account, a default email id is generated as per the following standard: &lsquo;AccountId@gmail.com.(Company name should be define in Magento admin configuration)</p>
+        </li>
+      </ul>
+      <br>
+      <h3>Below are the attributes will get sync to Salesforce and Magento.</h3>
+      <br>
+      <ul>
+        <li>
+          <p>Name: is account name in Salesforce and customer name in Magento .</p>
+        </li>
+        <li>
+          <p>Type: is the account type in Salesforce. When customer is registered then type should be 'Registered - Ecommerce' and when customer is placed order then type should be 'Customer - Ecommerce'.</p>
+        </li>
+        <li>
+          <p>Billing Street: Billing Street is Magento Billing Street Address.</p>
+        </li>
+        <li>
+          <p>Billing City: Billing City is Magento Accounts Billing City.</p>
+        </li>
+        <li>
+          <p>Billing State: Billing State is Magento account billing state.</p>
+        </li>
+        <li>
+          <p>Billing Country: Billing Country is accounts Billing Country in Magento.</p>
+        </li>
+        <li>
+          <p>ZipPostal Code: Magento billing Postal code.</p>
+        </li>
+        <li>
+          <p>Shipping Street: Shipping Street is Magento Shipping Street Address.</p>
+        </li>
+        <li>
+          <p>Shipping City: Shipping City is Magento Customer Shipping City.</p>
+        </li>
+        <li>
+          <p>Shipping State: Shipping State is Magento Customer shipping state.</p>
+        </li>
+        <li>
+          <p>Shipping Country: Shipping Country is Customer Shipping Country in Magento.</p>
+        </li>
+        <li>
+          <p>ZipPostal Code: ZipPostal Code is Magento shipping Postal Code.</p>
+        </li>
+        <li>
+          <p>Phone Number: Salesforce Billing and shipping Addresses Phone Number in Magento.</p>
+        </li>
+      </ul>
+      
+      <br>
+      <h2>Product Module</h2>
+      <br>
+      <h3>Magento To Salesforce</h3>
+      <br>
+      <ul>
+      	<li>Product Created with Simple Type will get sync to Salesforce.</li>
+       	<li>Simple Product Update from Magento to Salesforce.</li>
+        <li>By default Product type will be Family type in Salesforce.</li>
+      </ul>
+      <br>
+      <h3>Salesforce To Magento</h3>
+      <br>
+      <ul>
+        <li>Product Created in Salesforce will get sync to Magento.</li>
+        <li>Product Updated in Salesforce will update the Product in Magento.</li>
+        <li>Tax ID is configured in Magento Configuration based on client selection Tax Id will be process for Product.</li>
+        <li>Product Status is configured in Magento Configuration based on client selection Tax Id will be process for Product.</li>
+        <li>By Default all the product which will sync to Magento from Salesforce will have visibility ‘Catalog, Search’.</li>
+        <li>No weight is provided in salesforce than it will take 1 as default.</li>
+        <li>By default all the Product will get sync to Salesforce as a simple Product.</li>
+      </ul>
+      <br>
+      	<h3>Below are the attributes will get sync to Salesforce and Magento.</h3>
+      <ul>
+        <li>Name: is product name in Magento.</li>
+        <li>Product Model: is SKU in Magento.</li>
+        <li>Description: is Magento Description.</li>
+        <li>Short Description: is Short Description in Magento.</li>
+        <li>Price: is Magento product price.</li>
+        <li>Product Type: is Magento product type;</li>
+        <li>Active: is Magento product Active or Inactive.</li>
+        <li>Quantity: is Magento product Quantity.</li>
+        <li>Stock Availability: is Stock Availability in Magento.</li>
+        <li>Tax Class: is Tax Class in Magento.</li>
+        <li>Weight: is Weight in Magento.</li>
+		</ul>
+        <br>
+          <h2>Order Module</h2>
+          <br>
+          <h3>Magento To Salesforce</h3>
+          <br>
+          <ul>
+            <li>
+              <p>Order Creation from Magento to Salesforce.</p>
+            </li>
+            <li>
+              <p>Order Creation with Registered Customer From Magento Backend.</p>
+            </li>
+            <li>
+              <p>Order Creation with Registered Customer from Magento Backend with Same Billing &amp; Shipping Addresses.</p>
+            </li>
+            <li>
+              <p>Order Creation with Registered Customer from Magento Backend with different Billing and Shipping Addresses.</p>
+            </li>
+            <li>
+              <p>Order Creation with new Customer from Magento Front End will get sync.</p>
+            </li>
+            <li>
+              <p>Order Creation with a Registered Customer from Magento Front End with Same Billing &amp; Shipping Addresses.</p>
+            </li>
+            <li>
+              <p>Order Creation with a Registered Customer from Magento Front End with Different Billing &amp; Shipping Addresses.</p>
+            </li>
+            <li>
+              <p>Order creation from back end with new customer in Magento will not sync the billing and shipping address.</p>
+            </li>
+            <li>
+              <p>Order Created in Salesforce will have the status closed won.</p>
+            </li>
+            <li>
+              <p>Order created in Salesforce Closing date will have todays date with +10.</p>
+            </li>
+          </ul>
+          <br>
+            <h3>Salesforce to Magento</h3>
+          <br>
+          <ul>
+            <li>
+              <p>Order creation from Salesforce to Magento.</p>
+            </li>
+            <li>
+              <p>Order will get sync to Salesforce with number of product and price.</p>
+            </li>
+            <li>
+              <p>Currency is configured in Magento Configuration based on client selection Currency will be process for Order.</p>
+            </li>
+            <li>
+              <p>No shipping Method will get sync to Magento</p>
+            </li>
+            <li>
+              <p>Payment Method will be Purchase Order</p>
+            </li>
+            <li>
+              <p>No Order will get Sync to Magento , If Particular customer and Product doesn&rsquo;t exist in Magento</p>
+            </li>
+            <li>
+              <p>Order created in Magento by default it will have status as processing</p>
+            </li>
+          </ul>
+          <br>
+          <h3>Below are the attributes will get sync to Salesforce and Magento.</h3>
+          <br>
+          <ul>
+            <li>
+              <p>Name: Order Name</p>
+            </li>
+            <li>
+              <p>Status: Order status.</p>
+            </li>
+            <li>
+              <p>Total Qty: NO of product</p>
+			</li>
+            <li>
+              <p>Web: Source from where order is place</p>
+            </li>
+            <li>
+              <p>Close date: Order Close Date</p>
+            </li>
+            <li>
+              <p>Order Number: Magento order Id</p>
+            </li>
+          </ul>
+          
+          <br>
+          <h2>Lead Module</h2>
+          <br>
+          <h3>Magento To Salesforce</h3>
+          <br>
+          <ul>
+            <li>Magento contact us information will get sync to Salesforce as a Lead.</li>
+			<li>Leads will get sync to Magento to Salesforce only</li>
+            </li>
+          </ul>  
+          <h3>Below are the attributes will get sync to Salesforce and Magento</h3>
+          <br>
+          <ul>
+          	<li>Name: is account name in Magento contact us</li>
+            <li>Email: is contact us Email in Magento</li>
+            <li>Telephone: Telephone is Magento contact us Telephone;</li>
+            <li>Comment: Comment is Magento contact us Comment,</li>
+            <li>Website: Website is the name of the website from which url the lead is getting generate</li>
+            <li>Company: company name will be current store name.</li>
+          </ul> 
+          
+     </div>
   </div>
 </div>
-<div class="container"><hr/></div>
+<div class="container">
+  <hr/>
+</div>
 <div class="container">
   <div id="footer">
     <p class="text-muted">TechnoMile, 2015.</p>

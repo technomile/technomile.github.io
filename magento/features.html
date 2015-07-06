@@ -7,27 +7,10 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="shortcut icon" href="../img/favicon.ico">
-<title>Technomile Buildpack</title>
+<title>TechnoMile | Heroku Buildpack for Magento | Features</title>
 
 <!-- Bootstrap core CSS -->
 <link href="../css/bootstrap.min.css" rel="stylesheet">
-<!-- Custom styles for this template -->
-<!-- <link href="css/styles.css" rel="stylesheet">-->
-<!-- Just for debugging purposes. Don't actually copy this line! -->
-<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-<!--[if gte IE 9]>
-  <style type="text/css">
-    .gradient {
-       filter: none;
-    }
-  </style>
-<![endif]-->
 <style>
 @font-face {
 	font-family: 'ProximaNovaRegular';
@@ -239,15 +222,14 @@ ul.navbar-nav li {
           <p>Phone Number: Salesforce Billing and shipping Addresses Phone Number in Magento.</p>
         </li>
       </ul>
-      
       <br>
       <h2>Product Module</h2>
       <br>
       <h3>Magento To Salesforce</h3>
       <br>
       <ul>
-      	<li>Product Created with Simple Type will get sync to Salesforce.</li>
-       	<li>Simple Product Update from Magento to Salesforce.</li>
+        <li>Product Created with Simple Type will get sync to Salesforce.</li>
+        <li>Simple Product Update from Magento to Salesforce.</li>
         <li>By default Product type will be Family type in Salesforce.</li>
       </ul>
       <br>
@@ -263,7 +245,7 @@ ul.navbar-nav li {
         <li>By default all the Product will get sync to Salesforce as a simple Product.</li>
       </ul>
       <br>
-      	<h3>Below are the attributes will get sync to Salesforce and Magento.</h3>
+      <h3>Below are the attributes will get sync to Salesforce and Magento.</h3>
       <ul>
         <li>Name: is product name in Magento.</li>
         <li>Product Model: is SKU in Magento.</li>
@@ -276,116 +258,144 @@ ul.navbar-nav li {
         <li>Stock Availability: is Stock Availability in Magento.</li>
         <li>Tax Class: is Tax Class in Magento.</li>
         <li>Weight: is Weight in Magento.</li>
-		</ul>
-        <br>
-          <h2>Order Module</h2>
-          <br>
-          <h3>Magento To Salesforce</h3>
-          <br>
-          <ul>
-            <li>
-              <p>Order Creation from Magento to Salesforce.</p>
-            </li>
-            <li>
-              <p>Order Creation with Registered Customer From Magento Backend.</p>
-            </li>
-            <li>
-              <p>Order Creation with Registered Customer from Magento Backend with Same Billing &amp; Shipping Addresses.</p>
-            </li>
-            <li>
-              <p>Order Creation with Registered Customer from Magento Backend with different Billing and Shipping Addresses.</p>
-            </li>
-            <li>
-              <p>Order Creation with new Customer from Magento Front End will get sync.</p>
-            </li>
-            <li>
-              <p>Order Creation with a Registered Customer from Magento Front End with Same Billing &amp; Shipping Addresses.</p>
-            </li>
-            <li>
-              <p>Order Creation with a Registered Customer from Magento Front End with Different Billing &amp; Shipping Addresses.</p>
-            </li>
-            <li>
-              <p>Order creation from back end with new customer in Magento will not sync the billing and shipping address.</p>
-            </li>
-            <li>
-              <p>Order Created in Salesforce will have the status closed won.</p>
-            </li>
-            <li>
-              <p>Order created in Salesforce Closing date will have todays date with +10.</p>
-            </li>
-          </ul>
-          <br>
-            <h3>Salesforce to Magento</h3>
-          <br>
-          <ul>
-            <li>
-              <p>Order creation from Salesforce to Magento.</p>
-            </li>
-            <li>
-              <p>Order will get sync to Salesforce with number of product and price.</p>
-            </li>
-            <li>
-              <p>Currency is configured in Magento Configuration based on client selection Currency will be process for Order.</p>
-            </li>
-            <li>
-              <p>No shipping Method will get sync to Magento</p>
-            </li>
-            <li>
-              <p>Payment Method will be Purchase Order</p>
-            </li>
-            <li>
-              <p>No Order will get Sync to Magento , If Particular customer and Product doesn&rsquo;t exist in Magento</p>
-            </li>
-            <li>
-              <p>Order created in Magento by default it will have status as processing</p>
-            </li>
-          </ul>
-          <br>
-          <h3>Below are the attributes will get sync to Salesforce and Magento.</h3>
-          <br>
-          <ul>
-            <li>
-              <p>Name: Order Name</p>
-            </li>
-            <li>
-              <p>Status: Order status.</p>
-            </li>
-            <li>
-              <p>Total Qty: NO of product</p>
-			</li>
-            <li>
-              <p>Web: Source from where order is place</p>
-            </li>
-            <li>
-              <p>Close date: Order Close Date</p>
-            </li>
-            <li>
-              <p>Order Number: Magento order Id</p>
-            </li>
-          </ul>
-          
-          <br>
-          <h2>Lead Module</h2>
-          <br>
-          <h3>Magento To Salesforce</h3>
-          <br>
-          <ul>
-            <li>Magento contact us information will get sync to Salesforce as a Lead.</li>
-			<li>Leads will get sync to Magento to Salesforce only</li>
-            </li>
-          </ul>  
-          <h3>Below are the attributes will get sync to Salesforce and Magento</h3>
-          <br>
-          <ul>
-          	<li>Name: is account name in Magento contact us</li>
-            <li>Email: is contact us Email in Magento</li>
-            <li>Telephone: Telephone is Magento contact us Telephone;</li>
-            <li>Comment: Comment is Magento contact us Comment,</li>
-            <li>Website: Website is the name of the website from which url the lead is getting generate</li>
-            <li>Company: company name will be current store name.</li>
-          </ul> 
-          
-     </div>
+      </ul>
+      <br>
+      <h2>Order Module</h2>
+      <br>
+      <h3>Magento To Salesforce</h3>
+      <br>
+      <ul>
+        <li>
+          <p>Order Creation from Magento to Salesforce.</p>
+        </li>
+        <li>
+          <p>Order Creation with Registered Customer From Magento Backend.</p>
+        </li>
+        <li>
+          <p>Order Creation with Registered Customer from Magento Backend with Same Billing &amp; Shipping Addresses.</p>
+        </li>
+        <li>
+          <p>Order Creation with Registered Customer from Magento Backend with different Billing and Shipping Addresses.</p>
+        </li>
+        <li>
+          <p>Order Creation with new Customer from Magento Front End will get sync.</p>
+        </li>
+        <li>
+          <p>Order Creation with a Registered Customer from Magento Front End with Same Billing &amp; Shipping Addresses.</p>
+        </li>
+        <li>
+          <p>Order Creation with a Registered Customer from Magento Front End with Different Billing &amp; Shipping Addresses.</p>
+        </li>
+        <li>
+          <p>Order creation from back end with new customer in Magento will not sync the billing and shipping address.</p>
+        </li>
+        <li>
+          <p>Order Created in Salesforce will have the status closed won.</p>
+        </li>
+        <li>
+          <p>Order created in Salesforce Closing date will have todays date with +10.</p>
+        </li>
+      </ul>
+      <br>
+      <h3>Salesforce to Magento</h3>
+      <br>
+      <ul>
+        <li>
+          <p>Order creation from Salesforce to Magento.</p>
+        </li>
+        <li>
+          <p>Order will get sync to Salesforce with number of product and price.</p>
+        </li>
+        <li>
+          <p>Currency is configured in Magento Configuration based on client selection Currency will be process for Order.</p>
+        </li>
+        <li>
+          <p>No shipping Method will get sync to Magento</p>
+        </li>
+        <li>
+          <p>Payment Method will be Purchase Order</p>
+        </li>
+        <li>
+          <p>No Order will get Sync to Magento , If Particular customer and Product doesn&rsquo;t exist in Magento</p>
+        </li>
+        <li>
+          <p>Order created in Magento by default it will have status as processing</p>
+        </li>
+      </ul>
+      <br>
+      <h3>Below are the attributes will get sync to Salesforce and Magento.</h3>
+      <br>
+      <ul>
+        <li>
+          <p>Name: Order Name</p>
+        </li>
+        <li>
+          <p>Status: Order status.</p>
+        </li>
+        <li>
+          <p>Total Qty: NO of product</p>
+        </li>
+        <li>
+          <p>Web: Source from where order is place</p>
+        </li>
+        <li>
+          <p>Close date: Order Close Date</p>
+        </li>
+        <li>
+          <p>Order Number: Magento order Id</p>
+        </li>
+      </ul>
+      <br>
+      <h2>Abandon Cart</h2>
+      <br>
+      <h3>Magento To Salesforce</h3>
+      <br>
+      <ul>
+        <li>Abandon or cart Product will get sync to Salesforce.</li>
+        <li>Abandoned Product sync to Salesforce will have status prospecting</li>
+        <li>Abandon Product will consist the details of customer and Product.</li>
+      </ul>
+      <br>
+      <h2>Lead Module</h2>
+      <br>
+      <h3>Magento To Salesforce</h3>
+      <br>
+      <ul>
+        <li>Magento contact us information will get sync to Salesforce as a Lead.</li>
+        <li>Leads will get sync to Magento to Salesforce only</li>
+        </li>
+      </ul>
+      <br>
+      <h3>Below are the attributes will get sync to Salesforce and Magento</h3>
+      <br>
+      <ul>
+        <li>Name: is account name in Magento contact us</li>
+        <li>Email: is contact us Email in Magento</li>
+        <li>Telephone: is Magento contact us Telephone;</li>
+        <li>Comment: is Magento contact us Comment,</li>
+        <li>Website: is the name of the website from which url the lead is getting generate</li>
+        <li>Company: name will be current store name.</li>
+      </ul>
+      <br>
+      <h2>Newsletter</h2>
+      <br>
+      <h3>Magento To Salesforce</h3>
+      <br>
+      <ul>
+        <li>Newsletter subscribe will get sync from Magento to Salesforce through Back End.</li>
+        <li>Newsletter unsubscribe will get sync from Magento to Salesforce through Back End.</li>
+        <li>Newsletter subscribe will get sync from Magento to Salesforce through Front End.</li>
+      </ul>
+      <br>
+      <h2>Visitor Log Info</h2>
+      <br>
+      <h3>Magento To Salesforce</h3>
+      <br>
+      <ul>
+        <li>Visitors login/logout date time will get sync to Salesforce.</li>
+        <li>Visitors page view urls will get sync to Salesforce as cron basis.</li>
+      </ul>
+    </div>
   </div>
 </div>
 <div class="container">

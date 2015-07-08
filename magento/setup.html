@@ -189,40 +189,9 @@ heroku create
 <li>
   <p>Create admin username and password, Email Address and Site name.</p></li>
 </ul></li></ol>
-<h2>API configuration in Magento</h2>
-<ol>
-<li><p>Login to Magento admin panel.</p></li>
-<li><p>Create Custom Field in Contact Us form:</p>
-<ul>
-<li><p>Go to System->Transactional Emails->Add New Template</p></li>
-<li><p>Select 'Contact Form' from Template drop down</p></li>
-<li><p>Click on 'Load Template'.</p></li>
-<li><p>Add "Company: {{var data.company}}" in the template content, to add a new Company field in the form.</p></li>
-<li><p>Click on 'Save Template'.</p></li>
-</ul>
-</li>
-<li><p>Configure Salesforce API Extension</p>
-<ul>
-<li><p>Go to System->Configuration</p></li>
-<li><p>In 'TechnoMile Salesforce API Extension' section, click on 'Salesforce API Configuration'.</p></li>
-<li><p>Enable the API</p></li>
-<li><p>Fill SalesForce username, password, token</p></li>
-<li><p>Specify the path of WSDL file.</p></li>
-<li><p>Select the client type (Enterprise, Partner)</p></li>
-<li><p>Click on 'Check Salesforce Connection' button to validate Salesforce connection</p></li>
-<li><p>Enter the license key that you received in your email, to validate the API license</p></li>
-<li><p>Save the configurations.</p></li>
-<li><p>This will connect the magento app to SalesForce through SOAP.</p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
 
 <h2>Installing a Local Version</h2>
-
 <p>You can also install Magento on your local machine:</p>
-
 <ol>
 <li><p>Clone the repository</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-Magento-Salesforce-Connect
@@ -243,7 +212,6 @@ npm install
   <pre><code class="language-text" data-lang="text">wamp/xampp server
 </code></pre></div></li>
 <li><p>Run the application</p>
-
 <ul>
 <li>Open a browser and access the following URL:
 <a href="http://localhost:5000">http://localhost</a></li>
@@ -251,7 +219,38 @@ npm install
 </ul></li>
 </ol>
 
-
+<h2>API configuration in Magento</h2>
+<ol>
+<li><p>Login to Magento admin panel.</p></li>
+<li><p>Create Custom Field in Contact Us form:</p>
+<ul>
+<li>
+  <p>Go to System &gt;&gt; Transactional Emails &gt;&gt; Add New Template</p></li>
+<li><p>Select 'Contact Form' from Template drop down</p></li>
+<li><p>Click on 'Load Template'.</p></li>
+<li><p>Add "Company: {{var data.company}}" in the template content, to add a new Company field in the form.</p></li>
+<li><p>Click on 'Save Template'.</p></li>
+</ul>
+</li>
+<li><p>Configure Salesforce API Extension</p>
+<ul>
+<li>
+  <p>Go to System &gt;&gt; Configuration</p></li>
+<li><p>In 'TechnoMile Salesforce API Extension' section, click on 'Salesforce API Configuration'.</p></li>
+<li><p>Enable the API</p></li>
+<li>
+  <p>Fill Salesforce username, password, token</p></li>
+<li><p>Specify the path of WSDL file.</p></li>
+<li><p>Select the client type (Enterprise, Partner)</p></li>
+<li><p>Click on 'Check Salesforce Connection' button to validate Salesforce connection</p></li>
+<li><p>Enter the license key that you received in your email, to validate the API license</p></li>
+<li><p>Save the configurations.</p></li>
+<li><p>This will connect the magento app to SalesForce through SOAP.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
     </div>
   </div>
 </div>

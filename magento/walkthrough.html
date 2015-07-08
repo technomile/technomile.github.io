@@ -121,7 +121,7 @@ ul.navbar-nav li {
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h1>Application Walthrough</h1>
+      <h1>Application Walkthrough</h1>
       <h2>Sign Up and Login</h2>
       <ul>
         <li>
@@ -137,7 +137,21 @@ ul.navbar-nav li {
       <p><img src="../img/magento_registration.png" width="900px;"/></p>
       <br/>
       <p><img src="../img/salesforce_registration.png" width="900px;"/></p>
-      <h2>Product</h2>
+      
+      
+      <h2>Profile and Preferences</h2>
+      <ul>
+      	<li>Users can edit their profile and preferences. This information is saved in the Magento contact table in MySQL (and synchronized with the Contact object in Salesforce if you configured Salesforce integration).</li>
+        <li>Shipping &amp; Billing address come from the Magento Address table in MySQL. If you configured Salesforce integration, the Magento Address table is automatically synchronized with the Account object in Salesforce.</li>
+        <p><img src="../img/magento_shipping_billing.png" width="900px;"/></p>
+        <p><img src="../img/salesforce_shipping_billing.png" width="900px;"/></p>
+      </ul>
+      
+      <h2>Products</h2>
+      <ul>
+      	<li>Products come from the Magento Product table in MySQL. If you configured Salesforce integration, the Magento Product table is automatically synchronized with the Product2 object in Salesforce.</li>
+        <li>You can add a product to your wish list or share products on social networks</li>
+      </ul>
       <h3>Add Product Information in Magento.</h3>
       <p><img src="../img/create_product_step_1.png" width="900px;"/></p>
       <p><img src="../img/create_product_step_2.png" width="900px;"/></p>

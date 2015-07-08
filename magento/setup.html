@@ -180,14 +180,41 @@ heroku create
 <li><p>Click <a href="https://login.salesforce.com/packaging/installPackage.apexp?p0=04to00000003wbN" target="_blank">here</a>, to set up custom fields in Salesforce org.</p></li>
 <li><p>Download the Enterprise and Partner WSDL files from Salesforce org. Copy these files to \lib\soapclient.</p></li>
 <li><p>Push the changes to heroku.</p></li>
-<li><p>Run the the application:</p>
+<li><p>Run the the application and complete the magento installation process:</p>
 
 <ul>
 <li><p>Open the application in a browser:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">heroku open
 </code></pre></div></li>
 <li>
-  <p>Create  admin username and password, Email Address and Site name.</p></li>
+  <p>Create admin username and password, Email Address and Site name.</p></li>
+</ul></li></ol>
+<h2>API configuration in Magento</h2>
+<ol>
+<li><p>Login to Magento admin panel.</p></li>
+<li><p>Create Custom Field in Contact Us form:</p>
+<ul>
+<li><p>Go to System->Transactional Emails->Add New Template</p></li>
+<li><p>Select 'Contact Form' from Template drop down</p></li>
+<li><p>Click on 'Load Template'.</p></li>
+<li><p>Add "Company: {{var data.company}}" in the template content, to add a new Company field in the form.</p></li>
+<li><p>Click on 'Save Template'.</p></li>
+</ul>
+</li>
+<li><p>Configure Salesforce API Extension</p>
+<ul>
+<li><p>Go to System->Configuration</p></li>
+<li><p>In 'TechnoMile Salesforce API Extension' section, click on 'Salesforce API Configuration'.</p></li>
+<li><p>Enable the API</p></li>
+<li><p>Fill SalesForce username, password, token</p></li>
+<li><p>Specify the path of WSDL file.</p></li>
+<li><p>Select the client type (Enterprise, Partner)</p></li>
+<li><p>Click on 'Check Salesforce Connection' button to validate Salesforce connection</p></li>
+<li><p>Enter the license key that you received in your email, to validate the API license</p></li>
+<li><p>Save the configurations.</p></li>
+<li><p>This will connect the magento app to SalesForce through SOAP.</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>

@@ -7,27 +7,10 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="shortcut icon" href="../img/favicon.ico">
-<title>TechnoMile | Heroku Buildpack for Magento | Setup</title>
+<title>TechnoMile | Heroku Buildpack for Magento | Application Walthrough</title>
 
 <!-- Bootstrap core CSS -->
 <link href="../css/bootstrap.min.css" rel="stylesheet">
-<!-- Custom styles for this template -->
-<!-- <link href="css/styles.css" rel="stylesheet">-->
-<!-- Just for debugging purposes. Don't actually copy this line! -->
-<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-<!--[if gte IE 9]>
-  <style type="text/css">
-    .gradient {
-       filter: none;
-    }
-  </style>
-<![endif]-->
 <style>
 @font-face {
 	font-family: 'ProximaNovaRegular';
@@ -50,9 +33,9 @@
 	font-weight: normal;
 	font-style: normal
 }
-
-body{font: 16px ProximaNovaRegular,Arial,sans-serif;}
-
+body {
+	font: 16px ProximaNovaRegular, Arial, sans-serif;
+}
 .jumbotron {
 	background: #262626;
 	padding: 0px !important;
@@ -82,7 +65,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	-o-border-radius: 5px;
 	-ms-border-radius: 5px;
 	margin-bottom: 15px;
-	  min-height: 346px;
+	min-height: 346px;
 }
 .hbtn {
 	border: 4px solid #BDB6D2;
@@ -93,24 +76,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 }
 h2 {
 	font-family: 'ProximaNovaSemiBold';
-  font-size: 24px;
-  border-bottom: solid 1px #EEE;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  margin-top: 40px;
+	font-size: 24px;
+	border-bottom: solid 1px #EEE;
+	padding-bottom: 12px;
+	margin-bottom: 20px;
+	margin-top: 40px;
 }
 h1 {
 	font-family: 'ProximaNovaSemiBold';
-  font-size: 32px;
-  font-weight: 400;
-  margin-bottom: 16px;
+	font-size: 32px;
+	font-weight: 400;
+	margin-bottom: 16px;
 }
-
-ul li{
-  margin: 0 0 10px;
+ul li {
+	margin: 0 0 10px;
 }
-ul.navbar-nav  li{ margin:0 !important;}
-
+ul.navbar-nav li {
+	margin: 0 !important;
+}
 </style>
 </head>
 
@@ -120,7 +103,7 @@ ul.navbar-nav  li{ margin:0 !important;}
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       <a class="navbar-brand" href="index.html">Magento</a> </div>
-        <div class="navbar-collapse collapse">
+    <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li><a href="features.html">Features</a></li>
         <li><a href="walkthrough.html">Walkthrough</a></li>
@@ -135,92 +118,28 @@ ul.navbar-nav  li{ margin:0 !important;}
     <!--/.nav-collapse --> 
   </div>
 </div>
-
-
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
-        <h1>Setup</h1>
-        <!--<hr/>-->
-        <h2>Deploying to Heroku using the Heroku Button</h2>
-
-<p>You can deploy your own version of Magento in seconds using the Heroku button below:</p>
-
-<p><a href="https://heroku.com/deploy?template=https://github.com/technomile/Heroku-Magento-Salesforce-Connect"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
-
-<h2>Deploying to Heroku using the Command Line</h2>
-
-<p>You can also deploy Magento to Heroku using the command line:</p>
-
-<ol>
-<li><p>Clone the repository</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-Magento-Salesforce-Connect
-</code></pre></div></li>
-<li><p>Create a Heroku application</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cd Magento
-heroku create
-</code></pre></div></li>
-<li><p>Install the ClearDB plugin    </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add cleardb:ignite
-</code></pre></div></li>
-<li><p>Install the New Relic plugin    </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add newrelic:stark
-</code></pre></div></li>
-<li><p>Install the SendGrid plugin    </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add sendgrid:starter
-</code></pre></div></li>
-<li><p>Deploy to Heroku</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git push heroku master
-</code></pre></div></li>
-<li><p>Run the the application:</p>
-
-<ul>
-<li><p>Open the application in a browser:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">heroku open
-</code></pre></div></li>
-<li>
-  <p>Create  admin username and password, Email Address and Site name.</p></li>
-</ul>
-</li>
-</ol>
-
-<h2>Installing a Local Version</h2>
-
-<p>You can also install Magento on your local machine:</p>
-
-<ol>
-<li><p>Clone the repository</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-Magento-Salesforce-Connect
-</code></pre></div></li>
-<li><p>Install the server dependencies</p>
-<div class="highlight">
-  <pre><code class="language-text" data-lang="text">cd Magento
-npm install
-</code></pre></div></li>
-<li><p>Create a local database</p>
-
-<ul>
-<li>Install and start MySQL on your local machine</li>
-<li>Create a database called <strong>Magento</strong></li>
-</ul></li>
-<li><p>Start the server    </p>
-<div class="highlight">
-  <pre><code class="language-text" data-lang="text">wamp/xampp server
-</code></pre></div></li>
-<li><p>Run the application</p>
-
-<ul>
-<li>Open a browser and access the following URL:
-<a href="http://localhost:5000">http://localhost</a></li>
-<li>Create  admin username and password, Email Address and Site name.</li>
-</ul></li>
-</ol>
-
-
+    <div class="col-lg-12">
+      <h1>Application Walthrough</h1>
+      <h2>Sign Up and Login</h2>
+      <ul>
+        <li>
+          <p>You can sign up and create an account in the application.</p>
+        </li>
+        <li>
+          <p>Users are managed in the Account & Contact in Salesforce. If you configured the Salesforce integration, the Magento customer is automatically synchronized with the Account & Contact object in Salesforce.</p>
+        </li>
+        <li>
+          <p>User passwords are hashed with bcrypt using a per-user salt.</p>
+        </li>
+        <p>Group types Customer will sync to Salesforce as Registered Customer.</p>
+      </ul>
+      <p align="center"><img src="../img/magento_registration.png" width="607px;" height="380px;"/></p>
+      <p align="center"><img src="../img/salesforce_registration.png" width="600px;" height="376px;"/></p>
     </div>
   </div>
 </div>
-
 <div class="container"><hr/></div>
 <div class="container">
   <div id="footer">

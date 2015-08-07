@@ -123,12 +123,11 @@ ul.navbar-nav  li{ margin:0 !important;}
         <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li><a href="features.html">Features</a></li>
-        <li><a href="walkthrough.html">Walkthrough</a></li>
         <li><a href="architecture.html">Architecture</a></li>
         <li><a href="setup.html">Setup</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li> <a target="_blank" href="https://github.com/technomile/Heroku-Magento-Salesforce-Connect"><img src="../img/icon-github.png" style="border: none;margin: -4px 0;height: 28px;width: 28px;"> GitHub
+        <li> <a target="_blank" href="https://github.com/technomile/Heroku-Magento"><img src="../img/icon-github.png" style="border: none;margin: -4px 0;height: 28px;width: 28px;"> GitHub
           Project</a> </li>
       </ul>
     </div>
@@ -146,7 +145,7 @@ ul.navbar-nav  li{ margin:0 !important;}
 
 <p>You can deploy your own version of Magento in seconds using the Heroku button below:</p>
 
-<p><a href="https://heroku.com/deploy?template=https://github.com/technomile/Heroku-Magento-Salesforce-Connect"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
+<p><a href="https://heroku.com/deploy?template=https://github.com/technomile/Heroku-Magento"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
 
 <h2>Deploying to Heroku using the Command Line</h2>
 
@@ -154,7 +153,7 @@ ul.navbar-nav  li{ margin:0 !important;}
 
 <ol>
 <li><p>Clone the repository</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-Magento-Salesforce-Connect
+<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-Magento
 </code></pre></div></li>
 <li><p>Create a Heroku application</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">cd Magento
@@ -185,17 +184,17 @@ heroku create
   <p>Create admin username and password, Email Address and Site name.</p></li>
 </ul></li>
 <li><p>Add the credentials to app/etc/local.xml file.</p></li>
-<li><p>Click <a href="https://login.salesforce.com/packaging/installPackage.apexp?p0=04to00000003x6k" target="_blank">here</a>, to set up custom fields in Salesforce org.</p></li>
-<li><p>Download the Enterprise and Partner WSDL files from Salesforce org. Copy these files to \lib\soapclient.</p></li>
+<li>
+  <p>Download the Enterprise and Partner WSDL files from Salesforce org. Copy these files to \lib\soapclient.</p>
+</li>
 <li><p>Push the changes to heroku.</p></li>
-<li><p>To order the licence token key for the API <a href="http://www.forcegento.com/" target="_blank">click here</a>.</p></li>
 </ol>
 
 <h2>Installing a Local Version</h2>
 <p>You can also install Magento on your local machine:</p>
 <ol>
 <li><p>Clone the repository</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-Magento-Salesforce-Connect
+<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-Magento
 </code></pre></div></li>
 <li><p>Install the server dependencies</p>
 <div class="highlight">
@@ -221,41 +220,11 @@ npm install
 <li>
   <p>Create admin username and password, Email Address and Site name.</p></li>
 </ul></li>
-<li><p>Click <a href="https://login.salesforce.com/packaging/installPackage.apexp?p0=04to00000003wbN" target="_blank">here</a>, to set up custom fields in Salesforce org.</p></li>
-<li><p>Download the Enterprise and Partner WSDL files from Salesforce org. Copy these files to \lib\soapclient.</p></li></ol>
-
-<h2>API configuration in Magento</h2>
-<ol>
-<li><p>Login to Magento admin panel.</p></li>
-<li><p>Create Custom Field in Contact Us form:</p>
-<ul>
 <li>
-  <p>Go to System &gt;&gt; Transactional Emails &gt;&gt; Add New Template</p></li>
-<li><p>Select 'Contact Form' from Template drop down</p></li>
-<li><p>Click on 'Load Template'.</p></li>
-<li><p>Add "Company: {{var data.company}}" in the template content, to add a new Company field in the form.</p></li>
-<li><p>Click on 'Save Template'.</p></li>
-</ul>
-</li>
-<li><p>Configure Salesforce API Extension</p>
-<ul>
-<li>
-  <p>Go to System &gt;&gt; Configuration</p></li>
-<li><p>In 'TechnoMile Salesforce API Extension' section, click on 'Salesforce API Configuration'.</p></li>
-<li><p>Enable the API</p></li>
-<li>
-  <p>Fill Salesforce username, password, token</p></li>
-<li><p>Specify the path of WSDL file.</p></li>
-<li><p>Select the client type (Enterprise, Partner)</p></li>
-<li><p>Click on 'Check Salesforce Connection' button to validate Salesforce connection</p></li>
-<li><p>Enter the license key that you received in your email, to validate the API license</p></li>
-<li><p>Save the configurations.</p></li>
-<li><p>This will connect the magento app to SalesForce through SOAP.</p></li>
-</ul>
-</li>
-</ul>
+  <p>Download the Enterprise and Partner WSDL files from Salesforce org. Copy these files to \lib\soapclient.</p>
 </li>
 </ol>
+
     </div>
   </div>
 </div>

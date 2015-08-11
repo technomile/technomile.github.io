@@ -7,7 +7,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="shortcut icon" href="../img/favicon.ico">
-<title>ForceGento |  B2C eCommerce with Salesforce | Architechture</title>
+<title>B2C eCommerce with Salesforce | Architechture</title>
 
 <!-- Bootstrap core CSS -->
 <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -119,7 +119,7 @@ ul.navbar-nav li {
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="index.html">ForceGento</a> </div>
+      <a class="navbar-brand" href="index.html">B2C eCommerce</a> </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li><a href="features.html">Features</a></li>
@@ -128,7 +128,7 @@ ul.navbar-nav li {
         <li><a href="setup.html">Setup</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li> <a target="_blank" href="https://github.com/technomile/ForceGento"><img src="../img/icon-github.png" style="border: none;margin: -4px 0;height: 28px;width: 28px;"> GitHub
+        <li> <a target="_blank" href="https://github.com/technomile/b2c-ecommerce-on-salesforce-heroku"><img src="../img/icon-github.png" style="border: none;margin: -4px 0;height: 28px;width: 28px;"> GitHub
           Project</a> </li>
       </ul>
     </div>
@@ -140,15 +140,15 @@ ul.navbar-nav li {
     <div class="col-lg-12">
       <h1>Architecture</h1>
       <!--<hr/>-->
-      <p><img src="../img/magento_arch.jpg" style="width:100%" alt="alt tag"></p>
+      <p><img src="../img/magento_s_arch.jpg" style="width:100%" alt="alt tag"></p>
       <h2>Client-Side (Consumer App)</h2>
       <p>The consumer app is a multi-platform hybrid application. It runs on iOS, Android, Windows Phone, etc.</p>
       <h2>Client-Side (Employee-Facing)</h2>
-      <p>Users can manage the ecommerce data (customers, products &amp; orders) in Salesforce in the browser or in the Magento.</p>
+      <p>Users can manage the ecommerce data (customers, products &amp; orders) in Salesforce in the browser or in the eCommerce App.</p>
       <h2>Server-Side</h2>
-      <p>The server-side of the consumer app runs on Heroku and is built with <a title="Magento" href="http://www.magento.com/" target="_blank">Magento</a>. The server-side application exposes its own SOAP endpoints. The client application gets its data by invoking these SOAP services. These are API calls to your own application, and they count towards Salesforce API limits.</p>
+      <p>The server-side of the consumer app runs on Heroku and is built with <a title="eCommerce App" href="http://www.magento.com/" target="_blank">Magento</a>. The server-side application exposes its own SOAP endpoints. The client application gets its data by invoking these SOAP services. These are API calls to your own application, and they count towards Salesforce API limits.</p>
       <h2>Magento Integration with Salesforce</h2>
-      <p>The application data is maintained in Magento. It synchronizes the Magento data with a Salesforce running in Heroku.</p>
+      <p>The application data is maintained in Magento. It synchronizes the eCommerce App data with a Salesforce running in Heroku.</p>
       <p>Salesforce API synchronizes the following Salesforce objects using SOAP:</p>
       <ul>
         <li>Account (Bidirectional sync)</li>
@@ -157,10 +157,10 @@ ul.navbar-nav li {
         <li>Opportunity (Bidirectional sync)</li>
         <li>Opportunity Contact Roles (Bidirectional sync)</li>
         <li>Opportunity Line Item (Bidirectional sync)</li>
-        <li>Lead (Magento to Salesforce sync)</li>
-        <li>Case (Magento to Salesforce sync)</li>
-        <li>Newsletter (Magento to Salesforce sync)</li>
-        <li>Visitor Log Info (Magento to Salesforce sync)</li>
+        <li>Lead (eCommerce App to Salesforce sync)</li>
+        <li>Case (eCommerce App to Salesforce sync)</li>
+        <li>Newsletter (eCommerce App to Salesforce sync)</li>
+        <li>Visitor Log Info (eCommerce App to Salesforce sync)</li>
       </ul>
       <h2>User Management</h2>
       <ul>
@@ -174,7 +174,7 @@ ul.navbar-nav li {
 <div class="container"><hr/></div>
 <div class="container">
   <div id="footer">
-    <p class="text-muted">ForceGento, 2015. Powered by <a href="http://www.technomile.com" title="TechnoMile" target="_blank">TechnoMile</a></p>
+    <p class="text-muted">B2C eCommerce with Salesforce, 2015. Powered by <a href="http://www.technomile.com" title="TechnoMile" target="_blank">TechnoMile</a></p>
   </div>
   <!-- Site footer --> 
 </div>

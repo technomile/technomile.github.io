@@ -7,7 +7,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="shortcut icon" href="../img/favicon.ico">
-<title>ForceGento | B2C eCommerce with Salesforce | Application Walkthrough</title>
+<title>B2C eCommerce with Salesforce | Application Walkthrough</title>
 
 <!-- Bootstrap core CSS -->
 <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -102,7 +102,7 @@ ul.navbar-nav li {
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="index.html">ForceGento</a> </div>
+      <a class="navbar-brand" href="index.html">B2C eCommerce</a> </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li><a href="features.html">Features</a></li>
@@ -111,7 +111,7 @@ ul.navbar-nav li {
         <li><a href="setup.html">Setup</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li> <a target="_blank" href="https://github.com/technomile/ForceGento"><img src="../img/icon-github.png" style="border: none;margin: -4px 0;height: 28px;width: 28px;"> GitHub
+        <li> <a target="_blank" href="https://github.com/technomile/b2c-ecommerce-on-salesforce-heroku"><img src="../img/icon-github.png" style="border: none;margin: -4px 0;height: 28px;width: 28px;"> GitHub
           Project</a> </li>
       </ul>
     </div>
@@ -128,13 +128,13 @@ ul.navbar-nav li {
           <p>You can sign up and create an account in the application.</p>
         </li>
         <li>
-          <p>Users are managed in the Account & Contact in Salesforce. If you configured the Salesforce integration, the Magento customer is automatically synchronized with the Account & Contact object in Salesforce.</p>
+          <p>Users are managed in the Account & Contact in Salesforce. If you configured the Salesforce integration, the eCommerce App customer is automatically synchronized with the Account & Contact object in Salesforce.</p>
         </li>
         <li>
           <p>User passwords are hashed with bcrypt using a per-user salt.</p>
         </li>
       </ul>
-      <h3>Create Account in Magento.</h3>
+      <h3>Create Account in eCommerce App.</h3>
       <p><img src="../img/magento_registration.png" width="900px;"/></p>
       <h3>Account information in Salesforce.</h3>
       <p><img src="../img/salesforce_registration.png" width="900px;"/></p>
@@ -142,33 +142,33 @@ ul.navbar-nav li {
       
       <h2>My Account</h2>
       <ul>
-      	<li>Users can edit their profile and preferences. This information is saved in the Magento contact table in MySQL (and synchronized with the Contact object in Salesforce if you configured Salesforce integration).</li>
-        <li>Shipping &amp; Billing address come from the Magento Address table in MySQL. If you configured Salesforce integration, the Magento Address table is automatically synchronized with the Account object in Salesforce.</li>
+      	<li>Users can edit their profile and preferences. This information is saved in the eCommerce App contact table in MySQL (and synchronized with the Contact object in Salesforce if you configured Salesforce integration).</li>
+        <li>Shipping &amp; Billing address come from the eCommerce App Address table in MySQL. If you configured Salesforce integration, the eCommerce App Address table is automatically synchronized with the Account object in Salesforce.</li>
       </ul>
-      <h3>Create Shipping & Billing in Magento.</h3>
+      <h3>Create Shipping & Billing in eCommerce App.</h3>
       <p><img src="../img/magento_shipping_billing.png" width="900px;"/></p>
       <h3>Shipping & Billing information in Salesforce.</h3>
       <p><img src="../img/salesforce_shipping_billing.png" width="900px;"/></p>
         
       <h2>Products</h2>
       <ul>
-      	<li>Products come from the Magento Product table in MySQL. If you configured Salesforce integration, the Magento Product table is automatically synchronized with the Product2 object in Salesforce.</li>
+      	<li>Products come from the eCommerce App Product table in MySQL. If you configured Salesforce integration, the eCommerce App Product table is automatically synchronized with the Product2 object in Salesforce.</li>
         <li>You can add a product to your wish list or share products on social networks</li>
       </ul>
-      <h3>Add Product Information in Magento.</h3>
+      <h3>Add Product Information in eCommerce App.</h3>
       <p><img src="../img/create_product_step_1.png" width="900px;"/></p>
       <p><img src="../img/create_product_step_2.png" width="900px;"/></p>
-      <h3>Add general Product Information in Magento.</h3>
+      <h3>Add general Product Information in eCommerce App.</h3>
       <p><img src="../img/create_product_step_3.png" width="900px;"/></p>
-      <h3>Add prices Product Information in Magento.</h3>
+      <h3>Add prices Product Information in eCommerce App.</h3>
       <p><img src="../img/create_product_step_4.png" width="900px;"/></p>
-      <h3>Add inventory Product Information in Magento.</h3>
+      <h3>Add inventory Product Information in eCommerce App.</h3>
       <p><img src="../img/create_product_step_5.png" width="900px;"/></p>
       <h3>Product Information in Salesforce.</h3>
       <p><img src="../img/create_product_step_6.png" width="900px;"/></p>
       
       <h2>Orders</h2>
-      <h3>Add an item to cart from list of items in Magento.</h3>
+      <h3>Add an item to cart from list of items in eCommerce App.</h3>
       <p><img src="../img/order_step_1.png" width="900px;"/></p>
       <h3>From the cart click on &lsquo;Proceed To Checkout&rsquo; page.</h3>
       <p><img src="../img/order_step_2.png" width="900px;"/></p>
@@ -187,12 +187,12 @@ ul.navbar-nav li {
       <p><img src="../img/order_step_8.png" width="900px;"/></p>
       <p><img src="../img/order_step_9.png" width="900px;"/></p>
       <h2>Open A Ticket</h2>
-      <h3>Click ‘Open A Ticket’ in Magento. Fill in the form.</h3>
+      <h3>Click ‘Open A Ticket’ in eCommerce App. Fill in the form.</h3>
       <p><img src="../img/case_1.png" width="900px;"/></p>
       <h3>A case is created in Salesforce.</h3>
       <p><img src="../img/case_2.png" width="900px;"/></p>
       <h2>Contact Us</h2>
-      <h3>Click ‘Contact Us’ in Magento. Submit the form.</h3>
+      <h3>Click ‘Contact Us’ in eCommerce App. Submit the form.</h3>
       <p><img src="../img/contact_1.png" width="900px;"/></p>
       <h3>Lead is created in Salesforce.</h3>
       <p><img src="../img/contact_2.png" width="900px;"/></p>
@@ -202,7 +202,7 @@ ul.navbar-nav li {
       <p><img src="../img/visitor_log_info.png" width="900px;"/></p>
       
       <h2>Newsletter</h2>
-      <h3>Create newsletter in Magento.</h3>
+      <h3>Create newsletter in eCommerce App.</h3>
       <p><img src="../img/magento_newsletter.png" width="900px;"/></p>
       <h3>Newsletter information in Salesforce.</h3>
       <p><img src="../img/salesforce_newsletter.png" width="900px;"/></p>
@@ -215,7 +215,7 @@ ul.navbar-nav li {
 </div>
 <div class="container">
   <div id="footer">
-    <p class="text-muted">ForceGento, 2015. Powered by <a href="http://www.technomile.com" title="TechnoMile" target="_blank">TechnoMile</a></p>
+    <p class="text-muted">B2C eCommerce with Salesforce, 2015. Powered by <a href="http://www.technomile.com" title="TechnoMile" target="_blank">TechnoMile</a></p>
   </div>
   <!-- Site footer --> 
 </div>

@@ -7,7 +7,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="shortcut icon" href="../img/favicon.ico">
-<title>ForceGento | B2C eCommerce with Salesforce | Setup</title>
+<title>B2C eCommerce with Salesforce | Setup</title>
 
 <!-- Bootstrap core CSS -->
 <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -119,7 +119,7 @@ ul.navbar-nav  li{ margin:0 !important;}
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="index.html">ForceGento</a> </div>
+      <a class="navbar-brand" href="index.html">B2C eCommerce</a> </div>
         <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li><a href="features.html">Features</a></li>
@@ -128,7 +128,7 @@ ul.navbar-nav  li{ margin:0 !important;}
         <li><a href="setup.html">Setup</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li> <a target="_blank" href="https://github.com/technomile/ForceGento"><img src="../img/icon-github.png" style="border: none;margin: -4px 0;height: 28px;width: 28px;"> GitHub
+        <li> <a target="_blank" href="https://github.com/technomile/b2c-ecommerce-on-salesforce-heroku"><img src="../img/icon-github.png" style="border: none;margin: -4px 0;height: 28px;width: 28px;"> GitHub
           Project</a> </li>
       </ul>
     </div>
@@ -144,20 +144,20 @@ ul.navbar-nav  li{ margin:0 !important;}
         <!--<hr/>-->
         <h2>Deploying to Heroku using the Heroku Button</h2>
 
-<p>You can deploy your own version of Magento in seconds using the Heroku button below:</p>
+<p>You can deploy your own version of eCommerce App in seconds using the Heroku button below:</p>
 
-<p><a href="https://heroku.com/deploy?template=https://github.com/technomile/ForceGento"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
+<p><a href="https://heroku.com/deploy?template=https://github.com/technomile/b2c-ecommerce-on-salesforce-heroku"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
 
 <h2>Deploying to Heroku using the Command Line</h2>
 
-<p>You can also deploy Magento to Heroku using the command line:</p>
+<p>You can also deploy eCommerce App to Heroku using the command line:</p>
 
 <ol>
 <li><p>Clone the repository</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/ForceGento
+<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/b2c-ecommerce-on-salesforce-heroku
 </code></pre></div></li>
 <li><p>Create a Heroku application</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">cd Magento
+<div class="highlight"><pre><code class="language-text" data-lang="text">cd eCommerce
 heroku create
 </code></pre></div></li>
 <li><p>Install the ClearDB plugin    </p>
@@ -172,13 +172,13 @@ heroku create
 <li><p>Deploy to Heroku</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">git push heroku master
 </code></pre></div></li>
-<li><p>Run the the application and complete the magento installation process:</p>
+<li><p>Run the the application and complete the eCommerce App installation process:</p>
 <ul>
 <li><p>Open the application in a browser:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">heroku open
 </code></pre></div></li>
 <li>
-  <p>Get ClearDB database credentials and add at the time Magento installation:</p>
+  <p>Get ClearDB database credentials and add at the time eCommerce App installation:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">heroku config
 </code></pre></div></li>
 <li>
@@ -192,21 +192,21 @@ heroku create
 </ol>
 
 <h2>Installing a Local Version</h2>
-<p>You can also install Magento on your local machine:</p>
+<p>You can also install eCommerce App on your local machine:</p>
 <ol>
 <li><p>Clone the repository</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/ForceGento
+<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/b2c-ecommerce-on-salesforce-heroku
 </code></pre></div></li>
 <li><p>Install the server dependencies</p>
 <div class="highlight">
-  <pre><code class="language-text" data-lang="text">cd Magento
+  <pre><code class="language-text" data-lang="text">cd eCommerce
 npm install
 </code></pre></div></li>
 <li><p>Create a local database</p>
 
 <ul>
 <li>Install and start MySQL on your local machine</li>
-<li>Create a database called <strong>Magento</strong></li>
+<li>Create a database called <strong>eCommerce</strong></li>
 </ul></li>
 <li><p>Start the server    </p>
 <div class="highlight">
@@ -217,16 +217,16 @@ npm install
 <li>Open a browser and access the following URL:
 <a href="http://localhost:5000">http://localhost</a></li>
 <li>
-  <p>Get local database credentials and add at the time Magento installation:</p></li>
+  <p>Get local database credentials and add at the time eCommerce App installation:</p></li>
 <li>
   <p>Create admin username and password, Email Address and Site name.</p></li>
 </ul></li>
 <li><p>Click <a href="https://login.salesforce.com/packaging/installPackage.apexp?p0=04to00000003wbN" target="_blank">here</a>, to set up custom fields in Salesforce org.</p></li>
 <li><p>Download the Enterprise and Partner WSDL files from Salesforce org. Copy these files to \lib\soapclient.</p></li></ol>
 
-<h2>API configuration in Magento</h2>
+<h2>API configuration in eCommerce App</h2>
 <ol>
-<li><p>Login to Magento admin panel.</p></li>
+<li><p>Login to eCommerce App admin panel.</p></li>
 <li><p>Create Custom Field in Contact Us form:</p>
 <ul>
 <li>
@@ -250,7 +250,7 @@ npm install
 <li><p>Click on 'Check Salesforce Connection' button to validate Salesforce connection</p></li>
 <li><p>Enter the license key that you received in your email, to validate the API license</p></li>
 <li><p>Save the configurations.</p></li>
-<li><p>This will connect the magento app to SalesForce through SOAP.</p></li>
+<li><p>This will connect the eCommerce App app to SalesForce through SOAP.</p></li>
 </ul>
 </li>
 </ul>
@@ -263,7 +263,7 @@ npm install
 <div class="container"><hr/></div>
 <div class="container">
   <div id="footer">
-    <p class="text-muted">ForceGento, 2015. Powered by <a href="http://www.technomile.com" title="TechnoMile" target="_blank">TechnoMile</a></p>
+    <p class="text-muted">B2C eCommerce with Salesforce, 2015. Powered by <a href="http://www.technomile.com" title="TechnoMile" target="_blank">TechnoMile</a></p>
   </div>
   <!-- Site footer --> 
 </div>

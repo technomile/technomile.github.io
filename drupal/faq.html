@@ -7,7 +7,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="shortcut icon" href="../img/favicon.ico">
-<title>TechnoMile |  Heroku Buildpack for Drupal | Setup</title>
+<title>TechnoMile |  Heroku Buildpack for Drupal | FAQ</title>
 
 <!-- Bootstrap core CSS -->
 <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -50,9 +50,9 @@
 	font-weight: normal;
 	font-style: normal
 }
-
-body{font: 16px ProximaNovaRegular,Arial,sans-serif;}
-
+body {
+	font: 16px ProximaNovaRegular, Arial, sans-serif;
+}
 .jumbotron {
 	background: #262626;
 	padding: 0px !important;
@@ -82,7 +82,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	-o-border-radius: 5px;
 	-ms-border-radius: 5px;
 	margin-bottom: 15px;
-	  min-height: 346px;
+	min-height: 346px;
 }
 .hbtn {
 	border: 4px solid #BDB6D2;
@@ -93,24 +93,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 }
 h2 {
 	font-family: 'ProximaNovaSemiBold';
-  font-size: 24px;
-  border-bottom: solid 1px #EEE;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  margin-top: 40px;
+	font-size: 24px;
+	border-bottom: solid 1px #EEE;
+	padding-bottom: 12px;
+	margin-bottom: 20px;
+	margin-top: 40px;
 }
 h1 {
 	font-family: 'ProximaNovaSemiBold';
-  font-size: 32px;
-  font-weight: 400;
-  margin-bottom: 16px;
+	font-size: 32px;
+	font-weight: 400;
+	margin-bottom: 16px;
 }
-
-ul li{
-  margin: 0 0 10px;
+ul li {
+	margin: 0 0 10px;
 }
-ul.navbar-nav  li{ margin:0 !important;}
-
+ul.navbar-nav li {
+	margin: 0 !important;
+}
 </style>
 </head>
 
@@ -120,11 +120,12 @@ ul.navbar-nav  li{ margin:0 !important;}
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       <a class="navbar-brand" href="index.html">Drupal</a> </div>
-        <div class="navbar-collapse collapse">
+    <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li><a href="features.html">Features</a></li>
         <li><a href="architecture.html">Architecture</a></li>
         <li><a href="setup.html">Setup</a></li>
+        <li><a href="faq.html">FAQ</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li> <a target="_blank" href="https://github.com/technomile/Heroku-Drupal"><img src="../img/icon-github.png" style="border: none;margin: -4px 0;height: 28px;width: 28px;"> GitHub
@@ -134,48 +135,42 @@ ul.navbar-nav  li{ margin:0 !important;}
     <!--/.nav-collapse --> 
   </div>
 </div>
-
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
       <h1>FAQ</h1>
       <ol>
         <li>
-          <p>Button installs which version of WordPress on MySQL or WordPress on PostgreSQL?</p>
+          <p>Button installs which version of Drupal?</p>
           <div class="highlight">
-            <pre><code class="language-text" data-lang="text" style="color:#000">Button will install the latest version of WordPress 4.3 on MySQL but Wordpress on PostgresSQL can not upgraded to the latest version because the plugin "PostgreSQL for WordPress (PG4WP)" is compatible only up to: 3.4.2 (See details: https://wordpress.org/plugins/postgresql-for-wordpress/) We do not have any solution for this at this point</code></pre>
+            <pre><code class="language-text" data-lang="text" style="color:#000"><strong></strong>Button will install the latest version of Drupal 8 with MySQL & PostgreSQL.</code></pre>
           </div>
         </li>
         <li>
-          <p>How do I upgrade WordPress on MySQL with the latest version from admin section?</p>
+          <p>How do I upgrade Drupal with the latest version from admin section?</p>
           <div class="highlight">
-            <pre><code class="language-text" data-lang="text" style="color:#000">There is not going to be any way to upgrade WordPress from admin section or automatically by pushing a button because of the Heroku file system limitations. You need to first clone your repository then download the latest version of WordPress from <a target="_blank" href="https://wordpress.org/download/">Download WordPress</a> and next merge these two folders wp-admin & wp-includes at your root location "/" then push all these changes on Heroku App using git.</code></pre>
+            <pre><code class="language-text" data-lang="text" style="color:#000">There is not going to be any way to upgrade Drupal from admin section or automatically by pushing a button because of the Heroku file system limitations. You need to first clone your repository then download the latest version of Drupal from <a target="_blank" href="https://www.drupal.org/download">Download Drupal</a> then push all the changes on Heroku App using git.</code></pre>
           </div>
         </li>
         <li>
-          <p>How do I upgrade WordPress on PostgreSQL with the latest version from admin section?</p>
+          <p>How do I upgrade Drupal Plugins with the latest version?</p>
           <div class="highlight">
-            <pre><code class="language-text" data-lang="text" style="color:#000">Wordpress on PostgresSQL can not upgraded to the latest version PostgreSQL WordPress plugin because the plug"PostgreSQL for WordPress (PG4WP)" is compatible only up to: 3.4.2 (See details: https://wordpress.org/plugins/postgresql-for-wordpress/) We do not have any solution for this at this point</code></pre>
+            <pre><code class="language-text" data-lang="text" style="color:#000">There is not going to be any way to upgrade Drupal Plugins from admin section because of the Heroku file system limitations. You need to first clone your repository then download the latest version of your plugins then merge the plugin folders with existing plugins then next push the plugin folders using git.</code></pre>
           </div>
         </li>
         <li>
-          <p>How do I upgrade WordPress Plugins on MySQL or PostgreSQL with the latest version?</p>
+          <p>How my media files get uploaded on Drupal?</p>
           <div class="highlight">
-            <pre><code class="language-text" data-lang="text" style="color:#000">There is not going to be any way to upgrade WordPress Plugins from admin section because of the Heroku file system limitations. You need to first clone your repository then download the latest version of your plugins then merge the plugin folders at this location "wp-content/plugins" then push the plugin folders using git.</code></pre>
-          </div>
-        </li>
-        <li>
-          <p>How my media files get  uploaded  on WordPress (MySQL or PostgreSQL)?</p>
-          <div class="highlight">
-            <pre><code class="language-text" data-lang="text" style="color:#000">You can follow the "AWS configuration for WordPress Media" from <a href="http://technomile.github.io/wordpress/setup.html" target="_blank">setup</a> menu. </code></pre>
+            <pre><code class="language-text" data-lang="text" style="color:#000">You can get the information from <a href="https://www.drupal.org/node/1371166" target="_blank">here</a>. </code></pre>
           </div>
         </li>
       </ol>
     </div>
   </div>
 </div>
-
-<div class="container"><hr/></div>
+<div class="container">
+  <hr/>
+</div>
 <div class="container">
   <div id="footer">
     <p class="text-muted">TechnoMile, 2015.</p>

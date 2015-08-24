@@ -143,34 +143,31 @@ ul.navbar-nav li {
         <li>
           <p>Button installs which version of WordPress?</p>
           <div class="highlight">
-            <pre><code class="language-text" data-lang="text" style="color:#000"><strong>WordPress with MySQL:</strong> Button will install the latest version of WordPress 4.3 on MySQL.</code></pre>
+            <pre><code class="language-text" data-lang="text" style="color:#000"><strong>WordPress with MySQL:</strong> Button will install the latest version of WordPress 4.3 with MySQL.</code></pre>
           </div>
           <div class="highlight">
-            <pre><code class="language-text" data-lang="text" style="color:#000"><strong>WordPress with PostgreSQL:</strong> Button will not install the latest version of WordPress 4.3 on PostgresSQL because the plugin "PostgreSQL for WordPress (PG4WP)" is compatible only up to: 3.4.2 (See details: https://wordpress.org/plugins/postgresql-for-wordpress/) We do not have any solution for this at this point</code></pre>
-          </div>
-        </li>
-        <li>
-          <p>How do I upgrade WordPress on MySQL with the latest version from admin section?</p>
-          <div class="highlight">
-            <pre><code class="language-text" data-lang="text" style="color:#000">There is not going to be any way to upgrade WordPress from admin section or automatically by pushing a button because of the Heroku file system limitations. You need to first clone your repository then download the latest version of WordPress from <a target="_blank" href="https://wordpress.org/download/">Download WordPress</a> and next merge these two folders wp-admin & wp-includes at your root location "/" then push all these changes on Heroku App using git.</code></pre>
+            <pre><code class="language-text" data-lang="text" style="color:#000"><strong>WordPress with PostgreSQL:</strong> Button will not install the latest version of WordPress 4.3 with PostgresSQL because the plugin "PostgreSQL for WordPress (PG4WP)" is compatible only up to: 3.4.2 (See details: https://wordpress.org/plugins/postgresql-for-wordpress/) We do not have any solution for this at this point</code></pre>
           </div>
         </li>
         <li>
-          <p>How do I upgrade WordPress on PostgreSQL with the latest version from admin section?</p>
+          <p>How do I upgrade WordPress with the latest version from admin section?</p>
           <div class="highlight">
-            <pre><code class="language-text" data-lang="text" style="color:#000">Wordpress on PostgresSQL can not upgraded to the latest version PostgreSQL WordPress plugin because the plug"PostgreSQL for WordPress (PG4WP)" is compatible only up to: 3.4.2 (See details: https://wordpress.org/plugins/postgresql-for-wordpress/) We do not have any solution for this at this point</code></pre>
+            <pre><code class="language-text" data-lang="text" style="color:#000"><strong>WordPress with MySQL:</strong> There is not going to be any way to upgrade WordPress from admin section or automatically by pushing a button because of the Heroku file system limitations. You need to first clone your repository then download the latest version of WordPress from <a target="_blank" href="https://wordpress.org/download/">Download WordPress</a> and next merge these two folders wp-admin & wp-includes at your root location "/" then push all these changes on Heroku App using git.</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text" style="color:#000"><strong>WordPress with PostgreSQL:</strong> Wordpress with PostgresSQL can not upgraded to the latest version PostgreSQL WordPress plugin because the plug"PostgreSQL for WordPress (PG4WP)" is compatible only up to: 3.4.2 (See details: https://wordpress.org/plugins/postgresql-for-wordpress/) We do not have any solution for this at this point</code></pre>
           </div>
         </li>
         <li>
           <p>How do I upgrade WordPress Plugins on MySQL or PostgreSQL with the latest version?</p>
           <div class="highlight">
-            <pre><code class="language-text" data-lang="text" style="color:#000">There is not going to be any way to upgrade WordPress Plugins from admin section because of the Heroku file system limitations. You need to first clone your repository then download the latest version of your plugins then merge the plugin folders at this location "wp-content/plugins" then push the plugin folders using git.</code></pre>
+            <pre><code class="language-text" data-lang="text" style="color:#000"><strong>Wordpress with MySQL or PostgresSQL: </strong>There is not going to be any way to upgrade WordPress Plugins from admin section because of the Heroku file system limitations. You need to first clone your repository then download the latest version of your plugins then merge the plugin folders at this location "wp-content/plugins" then push the plugin folders using git.</code></pre>
           </div>
         </li>
         <li>
-          <p>How my media files get uploaded on WordPress (MySQL or PostgreSQL)?</p>
+          <p>How my media files get uploaded on WordPress?</p>
           <div class="highlight">
-            <pre><code class="language-text" data-lang="text" style="color:#000">You can follow the "AWS configuration for WordPress Media" from <a href="http://technomile.github.io/wordpress/setup.html" target="_blank">setup</a> menu. </code></pre>
+            <pre><code class="language-text" data-lang="text" style="color:#000"><strong>Wordpress with MySQL or PostgresSQL: </strong>You can follow the "AWS configuration for WordPress Media" from <a href="http://technomile.github.io/wordpress/setup.html" target="_blank">setup</a> menu. </code></pre>
           </div>
         </li>
       </ol>

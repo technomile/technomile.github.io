@@ -141,21 +141,33 @@ ul.navbar-nav li {
       <h1>FAQ</h1>
       <ol>
         <li>
-          <p>How do I upgrade WordPress with the latest version?</p>
+          <p>Button install which version of WordPress on MySQL and WordPress on PostgreSQL?</p>
           <div class="highlight">
-            <pre><code class="language-text" data-lang="text" style="color:#000">You need to first clone your repository then download the latest version of WordPress from <a target="_blank" href="https://wordpress.org/download/">Download WordPress</a> and next merge these two folders wp-admin & wp-includes at your root location "/" then push all these changes on Heroku App using git.</code></pre>
+            <pre><code class="language-text" data-lang="text" style="color:#000">Button will install the latest version of WordPress 4.3 but Wordpress on PostgresSQL can not upgraded to the latest version because because the plugin "PostgreSQL for WordPress (PG4WP)" is compatible only up to: 3.4.2 (See details: https://wordpress.org/plugins/postgresql-for-wordpress/) We do not have any solution for this at this point</code></pre>
           </div>
         </li>
         <li>
-          <p>How do I upgrade WordPress Plugins with latest version?</p>
+          <p>How do I upgrade WordPress on MySQL with the latest version from admin section?</p>
           <div class="highlight">
-            <pre><code class="language-text" data-lang="text" style="color:#000">You need to first clone your repository then download the latest version of your plugins then merge the plugin folder at this location "wp-content/plugins" then push the plugin folder using git.</code></pre>
+            <pre><code class="language-text" data-lang="text" style="color:#000">There is not going to be any way to upgrade WordPress from admin section or automatically by pushing a button because of the Heroku file system limitations. You need to first clone your repository then download the latest version of WordPress from <a target="_blank" href="https://wordpress.org/download/">Download WordPress</a> and next merge these two folders wp-admin & wp-includes at your root location "/" then push all these changes on Heroku App using git.</code></pre>
           </div>
         </li>
         <li>
-          <p>How do I upload my Media files on WordPress?</p>
+          <p>How do I upgrade WordPress on PostgreSQL with the latest version from admin section?</p>
           <div class="highlight">
-            <pre><code class="language-text" data-lang="text" style="color:#000">Please follow the AWS configuration for WordPress Media from <a href="http://technomile.github.io/wordpress/setup.html" target="_blank">setup</a> menu. </code></pre>
+            <pre><code class="language-text" data-lang="text" style="color:#000">Wordpress on PostgresSQL can not upgraded to the latest version PostgreSQL WordPress plugin because the plug"PostgreSQL for WordPress (PG4WP)" is compatible only up to: 3.4.2 (See details: https://wordpress.org/plugins/postgresql-for-wordpress/) We do not have any solution for this at this point</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>How do I upgrade WordPress Plugins on MySQL or PostgreSQL with the latest version?</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text" style="color:#000">There is not going to be any way to upgrade WordPress Plugins from admin section because of the Heroku file system limitations. You need to first clone your repository then download the latest version of your plugins then merge the plugin folders at this location "wp-content/plugins" then push the plugin folders using git.</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>How do I upload my Media files on WordPress (MySQL or PostgreSQL)?</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text" style="color:#000">Please follow the "AWS configuration for WordPress Media" from <a href="http://technomile.github.io/wordpress/setup.html" target="_blank">setup</a> menu. </code></pre>
           </div>
         </li>
       </ol>

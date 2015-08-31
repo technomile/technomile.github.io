@@ -290,7 +290,31 @@ npm install
 </ul></li>
 </ol>
 
-
+<h2>Setup of the Amazon S3 Module</h2>
+<ol>
+<li>
+  <p>Login to Drupal admin panel.</p></li>
+<li>On dashboard:
+  <ul>
+<li>
+  <p>Visit admin/Modules</p>
+  <p>Activate &quot;AmazonS3&quot;,&quot;AWS SDK for PHP&quot;,&quot;Composer Manager&quot; &amp;&quot;AWS SDK Libraries&quot;  for Drupal. </p>
+</li>
+<li>
+  <p>Verify that the AWS SDK can be loaded by visiting your site's status report at admin/reports/status; if the status reports indicates that the library cannot be loaded properly even after you verify that it is properly installed, clear all caches to ensure that the Libraries module uses the most up-to-date information.</p>
+</li>
+<li><p>Configure AWS SDK (You will need your two Security Credentials: <strong>Access Key ID</strong> and<strong>Secret Access Key</strong>. These are located in your account settings at<em><a href="http://aws.amazon.com/" rel="nofollow">http://aws.amazon.com</a></em>).</p></li>
+<li>
+  <p>Configure your bucket settings at /admin/config/media/amazon.</p></li>
+  <li>
+  <p>Visit admin/config/media/file-system and set the Default download method to S3.</p></li>
+  <li>
+  <p>Add a field of type File or Image etc and set the Upload destination to Amazon S3 in the Field Settings tab.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
 
     </div>
   </div>

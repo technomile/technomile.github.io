@@ -355,6 +355,7 @@ npm install
       <h2>Deploying to Heroku using the Heroku Button</h2>
       <p>You can deploy your own version of WordPress running on PostgreSQL on Heroku platform in seconds using the Heroku button below:</p>
       <p><a target="_blank" href="https://heroku.com/deploy?template=https://github.com/technomile/Heroku-WordPress-PostgreSQL"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
+      
       <h2>Deploying to Heroku using the Command Line</h2>
       <p>You can also deploy WordPress to Heroku using the command line:</p>
       <ol>
@@ -414,6 +415,7 @@ heroku create
           </ul>
         </li>
       </ol>
+      
       <h2>Installing a Local Version</h2>
       <p>You can also install WordPress on your local machine:</p>
       <ol>
@@ -451,6 +453,41 @@ npm install
           <ul>
             <li>Open a browser and access the following URL: <a href="http://localhost:5000">http://localhost</a></li>
           </ul>
+        </li>
+      </ol>
+
+<h2>Deploying latest plugins to Heroku using the Command Line</h2>
+      <p>You can upgrade Plugins to Heroku using the command line:</p>
+      <ol>
+        <li>
+          <p>Clone the repository (If already cloned then cd your APP_NAME and git pull)</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git clone git@heroku.com:YOUR_APP_NAME.git
+</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">cd YOUR_APP_NAME
+</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git pull origin master
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Download latest plugins from <a target="_blank" href="https://github.com/technomile/Heroku-WordPress-PostgreSQL">here</a> and unzip folder at your desktop.</p></li>
+        <li><p>Copy all the plugin folders from your desktop location "Heroku-WordPress-PostgreSQL-master/wp-content/plugins" and overwrite inside your Heroku App folder at this location "YOUR_APP_NAME/wp-content/plugins".</p></li>
+        <li>
+          <p>Deploy to Heroku using these three commands.</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git add .</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git commit -m "YOUR_COMMENT"</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git push heroku master</code></pre>
+          </div>
         </li>
       </ol>
 

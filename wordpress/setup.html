@@ -202,6 +202,7 @@ heroku create
           </ul>
         </li>
       </ol>
+      
       <h2>Installing a Local Version</h2>
       <p>You can also install WordPress on your local machine:</p>
       <ol>
@@ -241,7 +242,41 @@ npm install
           </ul>
         </li>
       </ol>
-      <h2>Deploying latest WordPress version to Heroku using the Command Line</h2>
+      
+      <h2>Deploying latest WordPress version & plugins to Heroku using the Command Line</h2>
+      <p>You can upgrade WordPress & Plugins to Heroku using the command line:</p>
+      <ol>
+        <li>
+          <p>Clone the repository (If already cloned then cd your app and git pull)</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git clone git@heroku.com:YOUR_APP_NAME.git
+</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">cd YOUR_APP_NAME
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Download latest WordPress version & plugins from <a target="_blank" href="https://github.com/technomile/Heroku-WordPress">here</a> and unzip folder at your desktop.</p></li>
+        <li><p>Copy these two folders &quot;wp-admin&quot; and &quot;wp-includes&quot; from your WordPress unzip folder "Heroku-WordPress-master" and overwrite inside your Heroku App folder location "YOUR_APP_NAME/".</p></li>
+        <li><p>Copy all the plugin folders from your desktop location "Heroku-WordPress-master/wp-content/plugins" and overwrite inside your Heroku App folder location "YOUR_APP_NAME/wp-content/plugins".</p></li>
+        <li>
+        <li>
+          <p>Deploy to Heroku using these three commands.</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git add .</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git commit -m "YOUR_COMMENT"</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git push heroku master</code></pre>
+          </div>
+        </li>
+      </ol>
+      
+      <!--<h2>Deploying latest WordPress version to Heroku using the Command Line</h2>
       <p>You can upgrade WordPress to Heroku using the command line:</p>
       <ol>
         <li>
@@ -308,7 +343,8 @@ npm install
             <pre><code class="language-text" data-lang="text">git push heroku master</code></pre>
           </div>
         </li>
-      </ol>
+      </ol>-->
+      
       <br/>
     
       <h1>WordPress & PostgreSQL Setup</h1>

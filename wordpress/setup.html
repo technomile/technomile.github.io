@@ -243,11 +243,11 @@ npm install
         </li>
       </ol>
       
-      <h2>Deploying latest WordPress version & plugins to Heroku using the Command Line</h2>
+      <h2>Deploying latest WordPress version & Plugins to Heroku using the Command Line</h2>
       <p>You can upgrade WordPress & Plugins to Heroku using the command line:</p>
       <ol>
         <li>
-          <p>Clone the repository (If already cloned then cd your app and git pull)</p>
+          <p>Clone the repository (If already cloned then cd your APP_NAME and git pull)</p>
           <div class="highlight">
             <pre><code class="language-text" data-lang="text">git clone git@heroku.com:YOUR_APP_NAME.git
 </code></pre>
@@ -256,11 +256,15 @@ npm install
             <pre><code class="language-text" data-lang="text">cd YOUR_APP_NAME
 </code></pre>
           </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git pull origin master
+</code></pre>
+          </div>
         </li>
         <li>
           <p>Download latest WordPress version & plugins from <a target="_blank" href="https://github.com/technomile/Heroku-WordPress">here</a> and unzip folder at your desktop.</p></li>
-        <li><p>Copy these two folders &quot;wp-admin&quot; and &quot;wp-includes&quot; from your "Heroku-WordPress-master" unzip folder and overwrite inside your Heroku App folder location "YOUR_APP_NAME/".</p></li>
-        <li><p>Copy all the plugin folders from your desktop location "Heroku-WordPress-master/wp-content/plugins" and overwrite inside your Heroku App folder location "YOUR_APP_NAME/wp-content/plugins".</p></li>
+        <li><p>Copy these two folders &quot;wp-admin&quot; and &quot;wp-includes&quot; from your unzip folder location "Heroku-WordPress-master" and overwrite inside your Heroku App folder at this location "YOUR_APP_NAME/".</p></li>
+        <li><p>Copy all the plugin folders from your desktop location "Heroku-WordPress-master/wp-content/plugins" and overwrite inside your Heroku App folder at this location "YOUR_APP_NAME/wp-content/plugins".</p></li>
         <li>
           <p>Deploy to Heroku using these three commands.</p>
           <div class="highlight">

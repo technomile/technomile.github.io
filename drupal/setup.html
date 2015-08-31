@@ -50,9 +50,9 @@
 	font-weight: normal;
 	font-style: normal
 }
-
-body{font: 16px ProximaNovaRegular,Arial,sans-serif;}
-
+body {
+	font: 16px ProximaNovaRegular, Arial, sans-serif;
+}
 .jumbotron {
 	background: #262626;
 	padding: 0px !important;
@@ -82,7 +82,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	-o-border-radius: 5px;
 	-ms-border-radius: 5px;
 	margin-bottom: 15px;
-	  min-height: 346px;
+	min-height: 346px;
 }
 .hbtn {
 	border: 4px solid #BDB6D2;
@@ -93,24 +93,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 }
 h2 {
 	font-family: 'ProximaNovaSemiBold';
-  font-size: 24px;
-  border-bottom: solid 1px #EEE;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  margin-top: 40px;
+	font-size: 24px;
+	border-bottom: solid 1px #EEE;
+	padding-bottom: 12px;
+	margin-bottom: 20px;
+	margin-top: 40px;
 }
 h1 {
 	font-family: 'ProximaNovaSemiBold';
-  font-size: 32px;
-  font-weight: 400;
-  margin-bottom: 16px;
+	font-size: 32px;
+	font-weight: 400;
+	margin-bottom: 16px;
 }
-
-ul li{
-  margin: 0 0 10px;
+ul li {
+	margin: 0 0 10px;
 }
-ul.navbar-nav  li{ margin:0 !important;}
-
+ul.navbar-nav li {
+	margin: 0 !important;
+}
 </style>
 </head>
 
@@ -120,7 +120,7 @@ ul.navbar-nav  li{ margin:0 !important;}
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       <a class="navbar-brand" href="index.html">Drupal</a> </div>
-        <div class="navbar-collapse collapse">
+    <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li><a href="features.html">Features</a></li>
         <li><a href="architecture.html">Architecture</a></li>
@@ -135,190 +135,324 @@ ul.navbar-nav  li{ margin:0 !important;}
     <!--/.nav-collapse --> 
   </div>
 </div>
-
-
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-        <h1>Drupal &amp; MySQL Setup</h1>
-        <!--<hr/>-->
-        <h2>Deploying to Heroku using the Heroku Button</h2>
-
-<p>You can deploy your own version of Drupal running on MySQL on Heroku platform in seconds using the Heroku button below:</p>
-
-<p><a href="https://heroku.com/deploy?template=https://github.com/technomile/Heroku-Drupal"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
-
-<h2>Deploying to Heroku using the Command Line</h2>
-
-<p>You can also deploy Drupal to Heroku using the command line:</p>
-
-<ol>
-<li><p>Clone the repository</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-Drupal
-</code></pre></div></li>
-<li><p>Create a Heroku application</p>
-<div class="highlight">
-  <pre><code class="language-text" data-lang="text">cd drupal
+      <h1>Drupal &amp; MySQL Setup</h1>
+      <!--<hr/>-->
+      <h2>Deploying to Heroku using the Heroku Button</h2>
+      <p>You can deploy your own version of Drupal running on MySQL on Heroku platform in seconds using the Heroku button below:</p>
+      <p><a href="https://heroku.com/deploy?template=https://github.com/technomile/Heroku-Drupal"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
+      <h2>Deploying to Heroku using the Command Line</h2>
+      <p>You can also deploy Drupal to Heroku using the command line:</p>
+      <ol>
+        <li>
+          <p>Clone the repository</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-Drupal
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Create a Heroku application</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">cd drupal
 heroku create
-</code></pre></div></li>
-<li><p>Install the ClearDB plugin    </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add cleardb:ignite
-</code></pre></div></li>
-<li><p>Install the New Relic plugin    </p>
-<div class="highlight">
-  <pre><code class="language-text" data-lang="text">heroku addons:add newrelic:wayne
-</code></pre></div></li>
-<li><p>Install the SendGrid plugin    </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add sendgrid:starter
-</code></pre></div></li>
-<li><p>Deploy to Heroku</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git push heroku master
-</code></pre></div></li>
-<li><p>Run the the application:</p>
-
-<ul>
-<li><p>Open the application in a browser:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">heroku open
-</code></pre></div></li>
-</ul>
-</li>
-</ol>
-
-<h2>Installing a Local Version</h2>
-
-<p>You can also install Drupal on your local machine:</p>
-
-<ol>
-<li><p>Clone the repository</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-Drupal
-</code></pre></div></li>
-<li><p>Install the server dependencies</p>
-<div class="highlight">
-  <pre><code class="language-text" data-lang="text">cd drupal
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Install the ClearDB plugin </p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">heroku addons:add cleardb:ignite
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Install the New Relic plugin </p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">heroku addons:add newrelic:wayne
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Install the SendGrid plugin </p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">heroku addons:add sendgrid:starter
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Deploy to Heroku</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git push heroku master
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Run the the application:</p>
+          <ul>
+            <li>
+              <p>Open the application in a browser:</p>
+              <div class="highlight">
+                <pre><code class="language-text" data-lang="text">heroku open
+</code></pre>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <h2>Installing a Local Version</h2>
+      <p>You can also install Drupal on your local machine:</p>
+      <ol>
+        <li>
+          <p>Clone the repository</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-Drupal
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Install the server dependencies</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">cd drupal
 npm install
-</code></pre></div></li>
-<li><p>Create a local database</p>
-
-<ul>
-<li>Install and start MySQL on your local machine</li>
-<li>Create a database called <strong>drupal</strong></li>
-</ul></li>
-<li><p>Start the server    </p>
-<div class="highlight">
-  <pre><code class="language-text" data-lang="text">wamp/xampp server
-</code></pre></div></li>
-<li><p>Run the application</p>
-
-<ul>
-<li>Open a browser and access the following URL:
-<a href="http://localhost:5000">http://localhost</a></li>
-</ul></li>
-</ol>
-
-<br/>
-        <h1>Drupal &amp; PostgreSQL Setup</h1>
-        <!--<hr/>-->
-        <h2>Deploying to Heroku using the Heroku Button</h2>
-
-<p>You can deploy your own version of Drupal running on PostgreSQL on Heroku platform in seconds using the Heroku button below:</p>
-
-<p><a href="https://heroku.com/deploy?template=https://github.com/technomile/Heroku-Drupal-PostgreSQL"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
-
-<h2>Deploying to Heroku using the Command Line</h2>
-
-<p>You can also deploy Drupal to Heroku using the command line:</p>
-
-<ol>
-<li><p>Clone the repository</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-Drupal-PostgreSQL
-</code></pre></div></li>
-<li><p>Create a Heroku application</p>
-<div class="highlight">
-  <pre><code class="language-text" data-lang="text">cd drupal
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Create a local database</p>
+          <ul>
+            <li>Install and start MySQL on your local machine</li>
+            <li>Create a database called <strong>drupal</strong></li>
+          </ul>
+        </li>
+        <li>
+          <p>Start the server </p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">wamp/xampp server
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Run the application</p>
+          <ul>
+            <li>Open a browser and access the following URL: <a href="http://localhost:5000">http://localhost</a></li>
+          </ul>
+        </li>
+      </ol>
+      
+      <h2>Deploying latest Drupal version & Plugins to Heroku using the Command Line</h2>
+      <p>You can upgrade Drupal & Plugins to Heroku using the command line:</p>
+      <ol>
+        <li>
+          <p>Clone the repository (If already cloned then cd your APP_NAME and git pull)</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git clone git@heroku.com:YOUR_APP_NAME.git
+</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">cd YOUR_APP_NAME
+</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git pull origin master
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Download latest Drupal version & plugins from <a target="_blank" href="https://github.com/technomile/Heroku-Drupal">here</a> and unzip folder at your desktop.</p></li>
+        <li><p>Copy all the folders from your unzip folder location "Heroku-Drupal-master" and overwrite inside your Heroku App folder at this location "YOUR_APP_NAME/".</p></li>
+        <li>
+          <p>Deploy to Heroku using these three commands.</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git add .</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git commit -m "YOUR_COMMENT"</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git push heroku master</code></pre>
+          </div>
+        </li>
+      </ol>
+      
+      <br/>
+      <h1>Drupal &amp; PostgreSQL Setup</h1>
+      <!--<hr/>-->
+      <h2>Deploying to Heroku using the Heroku Button</h2>
+      <p>You can deploy your own version of Drupal running on PostgreSQL on Heroku platform in seconds using the Heroku button below:</p>
+      <p><a href="https://heroku.com/deploy?template=https://github.com/technomile/Heroku-Drupal-PostgreSQL"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
+      <h2>Deploying to Heroku using the Command Line</h2>
+      <p>You can also deploy Drupal to Heroku using the command line:</p>
+      <ol>
+        <li>
+          <p>Clone the repository</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-Drupal-PostgreSQL
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Create a Heroku application</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">cd drupal
 heroku create
-</code></pre></div></li>
-<li><p>Install the Heroku Postgres plugin    </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add heroku-postgresql:hobby-dev
-</code></pre></div></li>
-<li><p>Install the New Relic plugin    </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add newrelic:wayne
-</code></pre></div></li>
-<li><p>Install the SendGrid plugin    </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add sendgrid:starter
-</code></pre></div></li>
-<li><p>Deploy to Heroku</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git push heroku master
-</code></pre></div></li>
-<li><p>Run the the application:</p>
-
-<ul>
-<li><p>Open the application in a browser:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">heroku open
-</code></pre></div></li>
-</ul>
-</li>
-</ol>
-
-<h2>Installing a Local Version</h2>
-
-<p>You can also install Drupal on your local machine:</p>
-
-<ol>
-<li><p>Clone the repository</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-Drupal-PostgreSQL
-</code></pre></div></li>
-<li><p>Install the server dependencies</p>
-<div class="highlight">
-  <pre><code class="language-text" data-lang="text">cd drupal
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Install the Heroku Postgres plugin </p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">heroku addons:add heroku-postgresql:hobby-dev
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Install the New Relic plugin </p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">heroku addons:add newrelic:wayne
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Install the SendGrid plugin </p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">heroku addons:add sendgrid:starter
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Deploy to Heroku</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git push heroku master
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Run the the application:</p>
+          <ul>
+            <li>
+              <p>Open the application in a browser:</p>
+              <div class="highlight">
+                <pre><code class="language-text" data-lang="text">heroku open
+</code></pre>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <h2>Installing a Local Version</h2>
+      <p>You can also install Drupal on your local machine:</p>
+      <ol>
+        <li>
+          <p>Clone the repository</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/Heroku-Drupal-PostgreSQL
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Install the server dependencies</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">cd drupal
 npm install
-</code></pre></div></li>
-<li><p>Create a local database</p>
-
-<ul>
-<li>Install and start PostgreSQL on your local machine</li>
-<li>Create a database called <strong>drupal</strong></li>
-</ul></li>
-<li><p>Start the server    </p>
-<div class="highlight">
-  <pre><code class="language-text" data-lang="text">wamp/xampp server
-</code></pre></div></li>
-<li><p>Run the application</p>
-
-<ul>
-<li>Open a browser and access the following URL:
-<a href="http://localhost:5000">http://localhost</a></li>
-</ul></li>
-</ol>
-
-<h2>Setup of the Amazon S3 Module</h2>
-<ol>
-<li>
-  <p>Login to Drupal admin panel.</p></li>
-<li>On dashboard:
-  <ul>
-<li>
-  <p>Visit admin/Modules then activate &quot;AmazonS3&quot;,&quot;AWS SDK for PHP&quot;,&quot;Composer Manager&quot; &amp;&quot;AWS SDK Libraries&quot;  for Drupal. </p>
-</li>
-<li>
-  <p>Verify that the AWS SDK can be loaded by visiting your site's status report at admin/reports/status; if the status reports indicates that the library cannot be loaded properly even after you verify that it is properly installed, clear all caches to ensure that the Libraries module uses the most up-to-date information.</p>
-</li>
-<li><p>Configure AWS SDK (You will need your two Security Credentials: <strong>Access Key ID</strong> and<strong>Secret Access Key</strong>. These are located in your account settings at<em><a  target="_blank" href="http://aws.amazon.com/" rel="nofollow">http://aws.amazon.com</a></em>).</p></li>
-<li>
-  <p>Configure your bucket settings at /admin/config/media/amazon.</p></li>
-  <li>
-  <p>Visit admin/config/media/file-system and set the Default download method to S3.</p></li>
-  <li>
-  <p>Add a field of type File or Image etc and set the Upload destination to Amazon S3 in the Field Settings tab.</p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Create a local database</p>
+          <ul>
+            <li>Install and start PostgreSQL on your local machine</li>
+            <li>Create a database called <strong>drupal</strong></li>
+          </ul>
+        </li>
+        <li>
+          <p>Start the server </p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">wamp/xampp server
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Run the application</p>
+          <ul>
+            <li>Open a browser and access the following URL: <a href="http://localhost:5000">http://localhost</a></li>
+          </ul>
+        </li>
+      </ol>
+      
+      <h2>Deploying latest Drupal version & Plugins to Heroku using the Command Line</h2>
+      <p>You can upgrade Drupal & Plugins to Heroku using the command line:</p>
+      <ol>
+        <li>
+          <p>Clone the repository (If already cloned then cd your APP_NAME and git pull)</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git clone git@heroku.com:YOUR_APP_NAME.git
+</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">cd YOUR_APP_NAME
+</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git pull origin master
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Download latest Drupal version & plugins from <a target="_blank" href="https://github.com/technomile/Heroku-Drupal">here</a> and unzip folder at your desktop.</p></li>
+        <li><p>Copy all the folders from your unzip folder location "Heroku-Drupal-master" and overwrite inside your Heroku App folder at this location "YOUR_APP_NAME/".</p></li>
+        <li>
+          <p>Deploy to Heroku using these three commands.</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git add .</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git commit -m "YOUR_COMMENT"</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git push heroku master</code></pre>
+          </div>
+        </li>
+      </ol>
+      
+      <h2>Setup of the Amazon S3 Module</h2>
+      <ol>
+        <li>
+          <p>Login to Drupal admin panel.</p>
+        </li>
+        <li>On dashboard:
+          <ul>
+            <li>
+              <p>Visit admin/Modules then activate &quot;AmazonS3&quot;,&quot;AWS SDK for PHP&quot;,&quot;Composer Manager&quot; &amp;&quot;AWS SDK Libraries&quot;  for Drupal. </p>
+            </li>
+            <li>
+              <p>Verify that the AWS SDK can be loaded by visiting your site's status report at admin/reports/status; if the status reports indicates that the library cannot be loaded properly even after you verify that it is properly installed, clear all caches to ensure that the Libraries module uses the most up-to-date information.</p>
+            </li>
+            <li>
+              <p>Configure AWS SDK (You will need your two Security Credentials: <strong>Access Key ID</strong> and<strong>Secret Access Key</strong>. These are located in your account settings at<em><a  target="_blank" href="http://aws.amazon.com/" rel="nofollow">http://aws.amazon.com</a></em>).</p>
+            </li>
+            <li>
+              <p>Configure your bucket settings at /admin/config/media/amazon.</p>
+            </li>
+            <li>
+              <p>Visit admin/config/media/file-system and set the Default download method to S3.</p>
+            </li>
+            <li>
+              <p>Add a field of type File or Image etc and set the Upload destination to Amazon S3 in the Field Settings tab.</p>
+            </li>
+          </ul>
+        </li>
+        </ul>
+        </li>
+      </ol>
     </div>
   </div>
 </div>
-<div class="container"><hr/></div>
+<div class="container">
+  <hr/>
+</div>
 <div class="container">
   <div id="footer">
     <p class="text-muted">TechnoMile, 2015.</p>

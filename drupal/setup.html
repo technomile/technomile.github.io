@@ -241,7 +241,6 @@ npm install
           </ul>
         </li>
       </ol>
-      
       <h2>Deploying latest Drupal version & Plugins to Heroku using the Command Line</h2>
       <p>You can upgrade Drupal & Plugins to Heroku using the command line:</p>
       <ol>
@@ -261,8 +260,11 @@ npm install
           </div>
         </li>
         <li>
-          <p>Download latest Drupal version & plugins from <a target="_blank" href="https://github.com/technomile/Heroku-Drupal">here</a> and unzip folder at your desktop.</p></li>
-        <li><p>Copy all the folders from your unzip folder location "Heroku-Drupal-master" and overwrite inside your Heroku App folder at this location "YOUR_APP_NAME/".</p></li>
+          <p>Download latest Drupal version & plugins from <a target="_blank" href="https://github.com/technomile/Heroku-Drupal">here</a> and unzip folder at your desktop.</p>
+        </li>
+        <li>
+          <p>Copy all the folders from your unzip folder location "Heroku-Drupal-master" and overwrite inside your Heroku App folder at this location "YOUR_APP_NAME/".</p>
+        </li>
         <li>
           <p>Deploy to Heroku using these three commands.</p>
           <div class="highlight">
@@ -276,7 +278,6 @@ npm install
           </div>
         </li>
       </ol>
-      
       <br/>
       <h1>Drupal &amp; PostgreSQL Setup</h1>
       <!--<hr/>-->
@@ -381,7 +382,6 @@ npm install
           </ul>
         </li>
       </ol>
-      
       <h2>Deploying latest Drupal version & Plugins to Heroku using the Command Line</h2>
       <p>You can upgrade Drupal & Plugins to Heroku using the command line:</p>
       <ol>
@@ -401,8 +401,11 @@ npm install
           </div>
         </li>
         <li>
-          <p>Download latest Drupal version & plugins from <a target="_blank" href="https://github.com/technomile/Heroku-Drupal-PostgreSQL">here</a> and unzip folder at your desktop.</p></li>
-        <li><p>Copy all the folders from your unzip folder location "Heroku-Drupal-PostgreSQL-master" and overwrite inside your Heroku App folder at this location "YOUR_APP_NAME/".</p></li>
+          <p>Download latest Drupal version & plugins from <a target="_blank" href="https://github.com/technomile/Heroku-Drupal-PostgreSQL">here</a> and unzip folder at your desktop.</p>
+        </li>
+        <li>
+          <p>Copy all the folders from your unzip folder location "Heroku-Drupal-PostgreSQL-master" and overwrite inside your Heroku App folder at this location "YOUR_APP_NAME/".</p>
+        </li>
         <li>
           <p>Deploy to Heroku using these three commands.</p>
           <div class="highlight">
@@ -415,6 +418,24 @@ npm install
             <pre><code class="language-text" data-lang="text">git push heroku master</code></pre>
           </div>
         </li>
+      </ol>
+      
+      <h2>How to find your AWS Access Key ID and Secret Access Key</h2>
+      <ol>
+        <li>
+          <p>Go to <strong><a href="https://aws.amazon.com" target="_blank">Amazon Web Services</a></strong> console andclick on the name of your account (it is located in the top right corner of the console). Then, in the expanded drop-down list, select <strong>Security Credentials</strong>.</p>
+        </li>
+        <li>
+          <p>Click the <strong>Continue to Security Credentials </strong>button.</p>
+        </li>
+        <li>
+          <p>Expand the Access Keys (Access Key ID and Secret Access Key) option. You will see the list of your active and deleted access keys.<strong> Note:</strong> You cannot retrieve the existing secret key. You can see the secret key only once immediately after creating. So, in order to get a secret key, you will need to create a new one.</p>
+        </li>
+        <li><p>To generate new access keys, click the Create New Access Key button.</p></li>
+        <li>
+          <p>Click <strong>Show Access Key </strong>to have it displayed on the screen. Note, that you can download it to your machine as a file and open it whenever needed. To download it, just click the <strong>Download Key File</strong> button.<strong> Attention!</strong> If you do not write down the key or download the key file to your computer before you press "Close" or "Cancel" you will not be able to retrieve the secret key in future. Then you'll have to delete the keys which you created and start to create new keys.</p>
+        </li>
+        <li><p>Click <a href="http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html" target="_blank">here</a> to see how to create a S3 bucket on amazon</p></li>
       </ol>
       
       <h2>Setup of the Amazon S3 Module</h2>

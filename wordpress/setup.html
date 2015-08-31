@@ -202,7 +202,6 @@ heroku create
           </ul>
         </li>
       </ol>
-      
       <h2>Installing a Local Version</h2>
       <p>You can also install WordPress on your local machine:</p>
       <ol>
@@ -242,7 +241,6 @@ npm install
           </ul>
         </li>
       </ol>
-      
       <h2>Deploying latest WordPress version & Plugins to Heroku using the Command Line</h2>
       <p>You can upgrade WordPress & Plugins to Heroku using the command line:</p>
       <ol>
@@ -262,9 +260,14 @@ npm install
           </div>
         </li>
         <li>
-          <p>Download latest WordPress version & plugins from <a target="_blank" href="https://github.com/technomile/Heroku-WordPress">here</a> and unzip folder at your desktop.</p></li>
-        <li><p>Copy these two folders &quot;wp-admin&quot; and &quot;wp-includes&quot; from your unzip folder location "Heroku-WordPress-master" and overwrite inside your Heroku App folder at this location "YOUR_APP_NAME/".</p></li>
-        <li><p>Copy all the plugin folders from your desktop location "Heroku-WordPress-master/wp-content/plugins" and overwrite inside your Heroku App folder at this location "YOUR_APP_NAME/wp-content/plugins".</p></li>
+          <p>Download latest WordPress version & plugins from <a target="_blank" href="https://github.com/technomile/Heroku-WordPress">here</a> and unzip folder at your desktop.</p>
+        </li>
+        <li>
+          <p>Copy these two folders &quot;wp-admin&quot; and &quot;wp-includes&quot; from your unzip folder location "Heroku-WordPress-master" and overwrite inside your Heroku App folder at this location "YOUR_APP_NAME/".</p>
+        </li>
+        <li>
+          <p>Copy all the plugin folders from your desktop location "Heroku-WordPress-master/wp-content/plugins" and overwrite inside your Heroku App folder at this location "YOUR_APP_NAME/wp-content/plugins".</p>
+        </li>
         <li>
           <p>Deploy to Heroku using these three commands.</p>
           <div class="highlight">
@@ -346,16 +349,14 @@ npm install
             <pre><code class="language-text" data-lang="text">git push heroku master</code></pre>
           </div>
         </li>
-      </ol>-->
+      </ol>--> 
       
       <br/>
-    
       <h1>WordPress & PostgreSQL Setup</h1>
       <!--<hr/>-->
       <h2>Deploying to Heroku using the Heroku Button</h2>
       <p>You can deploy your own version of WordPress running on PostgreSQL on Heroku platform in seconds using the Heroku button below:</p>
       <p><a target="_blank" href="https://heroku.com/deploy?template=https://github.com/technomile/Heroku-WordPress-PostgreSQL"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
-      
       <h2>Deploying to Heroku using the Command Line</h2>
       <p>You can also deploy WordPress to Heroku using the command line:</p>
       <ol>
@@ -415,7 +416,6 @@ heroku create
           </ul>
         </li>
       </ol>
-      
       <h2>Installing a Local Version</h2>
       <p>You can also install WordPress on your local machine:</p>
       <ol>
@@ -455,8 +455,7 @@ npm install
           </ul>
         </li>
       </ol>
-
-<h2>Deploying latest plugins to Heroku using the Command Line</h2>
+      <h2>Deploying latest plugins to Heroku using the Command Line</h2>
       <p>You can upgrade Plugins to Heroku using the command line:</p>
       <ol>
         <li>
@@ -475,8 +474,11 @@ npm install
           </div>
         </li>
         <li>
-          <p>Download latest plugins from <a target="_blank" href="https://github.com/technomile/Heroku-WordPress-PostgreSQL">here</a> and unzip folder at your desktop.</p></li>
-        <li><p>Copy all the plugin folders from your desktop location "Heroku-WordPress-PostgreSQL-master/wp-content/plugins" and overwrite inside your Heroku App folder at this location "YOUR_APP_NAME/wp-content/plugins".</p></li>
+          <p>Download latest plugins from <a target="_blank" href="https://github.com/technomile/Heroku-WordPress-PostgreSQL">here</a> and unzip folder at your desktop.</p>
+        </li>
+        <li>
+          <p>Copy all the plugin folders from your desktop location "Heroku-WordPress-PostgreSQL-master/wp-content/plugins" and overwrite inside your Heroku App folder at this location "YOUR_APP_NAME/wp-content/plugins".</p>
+        </li>
         <li>
           <p>Deploy to Heroku using these three commands.</p>
           <div class="highlight">
@@ -490,36 +492,58 @@ npm install
           </div>
         </li>
       </ol>
-
-<h2>Amazon Web Services configuration for  WordPress Media</h2>
-<ol>
-<li>
-  <p>Login to WordPress admin panel.</p></li>
-<li>On dashboard:
-  <ul>
-<li>
-  <p>Go to Plugins &gt;&gt; Installed Plugins</p>
-  <p>Activate &quot;Amazon Web Services&quot; &amp; &quot;WP Offload S3&quot; for WordPress & MySQL Setup. </p>
-  <p>OR</p>
-  <p>Activate &quot;Amazon Web Services&quot; &amp; &quot;Amazon S3 and CloudFront&quot; for WordPress & PostgreSQL Setup.</p>
-</li>
-<li>
-  <p>Insert your Amazon S3 &quot;Access Key ID&quot; &amp; &quot;Secret Access Key&quot; and click on &quot;Save Changes&quot; button.</p>
-</li>
-<li>
-  <p>Select your existing Bucket or create a new Bucket for storing WordPress Media.</p></li>
-<li>
-  <p>Click on &quot;Save Changes&quot; button and your are done.</p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-
+      
+      <h2>How to find your AWS Access Key ID and Secret Access Key</h2>
+      <ol>
+        <li>
+          <p>Go to <strong><a href="https://aws.amazon.com" target="_blank">Amazon Web Services</a></strong> console andclick on the name of your account (it is located in the top right corner of the console). Then, in the expanded drop-down list, select <strong>Security Credentials</strong>.</p>
+        </li>
+        <li>
+          <p>Click the <strong>Continue to Security Credentials </strong>button.</p>
+        </li>
+        <li>
+          <p>Expand the Access Keys (Access Key ID and Secret Access Key) option. You will see the list of your active and deleted access keys.<strong> Note:</strong> You cannot retrieve the existing secret key. You can see the secret key only once immediately after creating. So, in order to get a secret key, you will need to create a new one.</p>
+        </li>
+        <li><p>To generate new access keys, click the Create New Access Key button.</p></li>
+        <li>
+          <p>Click <strong>Show Access Key </strong>to have it displayed on the screen. Note, that you can download it to your machine as a file and open it whenever needed. To download it, just click the <strong>Download Key File</strong> button.<strong> Attention!</strong> If you do not write down the key or download the key file to your computer before you press "Close" or "Cancel" you will not be able to retrieve the secret key in future. Then you'll have to delete the keys which you created and start to create new keys.</p>
+        </li>
+        <li><p>Click <a href="http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html" target="_blank">here</a> to see how to create a S3 bucket on amazon</p></li>
+      </ol>
+      
+      <h2>Amazon Web Services configuration for  WordPress Media</h2>
+      <ol>
+        <li>
+          <p>Login to WordPress admin panel.</p>
+        </li>
+        <li>On dashboard:
+          <ul>
+            <li>
+              <p>Go to Plugins &gt;&gt; Installed Plugins</p>
+              <p>Activate &quot;Amazon Web Services&quot; &amp; &quot;WP Offload S3&quot; for WordPress & MySQL Setup. </p>
+              <p>OR</p>
+              <p>Activate &quot;Amazon Web Services&quot; &amp; &quot;Amazon S3 and CloudFront&quot; for WordPress & PostgreSQL Setup.</p>
+            </li>
+            <li>
+              <p>Insert your Amazon S3 &quot;Access Key ID&quot; &amp; &quot;Secret Access Key&quot; and click on &quot;Save Changes&quot; button.</p>
+            </li>
+            <li>
+              <p>Select your existing Bucket or create a new Bucket for storing WordPress Media.</p>
+            </li>
+            <li>
+              <p>Click on &quot;Save Changes&quot; button and your are done.</p>
+            </li>
+          </ul>
+        </li>
+        </ul>
+        </li>
+      </ol>
     </div>
   </div>
 </div>
-<div class="container"><hr/></div>
+<div class="container">
+  <hr/>
+</div>
 <div class="container">
   <div id="footer">
     <p class="text-muted">TechnoMile, 2015.</p>

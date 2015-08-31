@@ -245,7 +245,7 @@ npm install
       <p>You can upgrade WordPress to Heroku using the command line:</p>
       <ol>
         <li>
-          <p>Clone the repository (If already cloned then ignore this step)</p>
+          <p>Clone the repository (If already cloned then cd your app and git pull)</p>
           <div class="highlight">
             <pre><code class="language-text" data-lang="text">git clone git@heroku.com:YOUR_APP_NAME.git
 </code></pre>
@@ -258,9 +258,9 @@ npm install
         <li>
           <p>Download latest WordPress version from <a target="_blank" href="https://wordpress.org/download/">here</a> and unzip folder at your desktop.</p></li>
         <li>
-          <p>Copy these two folders &quot;wp-admin&quot; and &quot;wp-includes&quot; from your WordPress unzip folder and overwrite inside your Heroku App folder.</p></li>
+        <p>Copy these two folders &quot;wp-admin&quot; and &quot;wp-includes&quot; from your WordPress unzip folder and overwrite inside your Heroku App folder.</p></li>
         <li>
-          <p>Deploy to Heroku using these three commands</p>
+          <p>Deploy to Heroku using these three commands.</p>
           <div class="highlight">
             <pre><code class="language-text" data-lang="text">git add .</code></pre>
           </div>
@@ -277,7 +277,7 @@ npm install
       <p>You can upgrade WordPress plugins to Heroku using the command line:</p>
       <ol>
         <li>
-          <p>Clone the repository (If already cloned then ignore this step)</p>
+          <p>Clone the repository (If already cloned then cd your app and git pull)</p>
           <div class="highlight">
             <pre><code class="language-text" data-lang="text">git clone git@heroku.com:YOUR_APP_NAME.git
 </code></pre>
@@ -286,13 +286,18 @@ npm install
             <pre><code class="language-text" data-lang="text">cd YOUR_APP_NAME
 </code></pre>
           </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git pull origin master
+</code></pre>
+          </div>
         </li>
         <li>
-          <p>Download latest WordPress plugins and unzip plugin folders at your desktop.</p></li>
+          <p>Download latest WordPress plugins from here <a href="https://wordpress.org/plugins/all-in-one-seo-pack/" target="_blank">All In One SEO Pack</a>, <a href="https://wordpress.org/plugins/amazon-web-services/" target="_blank">Amazon Web Services</a>, <a href="https://wordpress.org/plugins/contact-form-7/" target="_blank">Contact Form 7</a>, <a href="https://wordpress.org/plugins/custom-field-suite/" target="_blank">Custom Field Suite</a>, <a href="https://wordpress.org/plugins/quick-pagepost-redirect-plugin/" target="_blank">Quick Page/Post Redirect Plugin</a>, <a href="https://wordpress.org/plugins/sendgrid-email-delivery-simplified/" target="_blank">SendGrid</a>, <a href="https://wordpress.org/plugins/testimonials-by-woothemes/" target="_blank">Testimonials</a>, 
+<a href="https://wordpress.org/plugins/woocommerce/" target="_blank">WooCommerce</a>, <a href="https://wordpress.org/plugins/woocommerce-dropdown-cart/" target="_blank">WooCommerce Dropdown Cart</a>, <a href="https://wordpress.org/plugins/wp-google-analytics/" target="_blank">WP Google Analytics</a>, <a href="https://wordpress.org/plugins/amazon-s3-and-cloudfront/" target="_blank">WP Offload S3</a>, <a href="https://wordpress.org/plugins/wp-pagenavi/" target="_blank">WP-PageNavi</a>.then unzip plugin folders at your desktop.</p></li>
         <li>
           <p>Copy all the plugin folders from your desktop and overwrite inside your Heroku App folder location "wp-content/plugins".</p></li>
         <li>
-          <p>Deploy to Heroku using these three commands</p>
+          <p>Deploy to Heroku using these three commands.</p>
           <div class="highlight">
             <pre><code class="language-text" data-lang="text">git add .</code></pre>
           </div>

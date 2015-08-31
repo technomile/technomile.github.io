@@ -50,9 +50,9 @@
 	font-weight: normal;
 	font-style: normal
 }
-
-body{font: 16px ProximaNovaRegular,Arial,sans-serif;}
-
+body {
+	font: 16px ProximaNovaRegular, Arial, sans-serif;
+}
 .jumbotron {
 	background: #262626;
 	padding: 0px !important;
@@ -82,7 +82,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 	-o-border-radius: 5px;
 	-ms-border-radius: 5px;
 	margin-bottom: 15px;
-	  min-height: 346px;
+	min-height: 346px;
 }
 .hbtn {
 	border: 4px solid #BDB6D2;
@@ -93,24 +93,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 }
 h2 {
 	font-family: 'ProximaNovaSemiBold';
-  font-size: 24px;
-  border-bottom: solid 1px #EEE;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  margin-top: 40px;
+	font-size: 24px;
+	border-bottom: solid 1px #EEE;
+	padding-bottom: 12px;
+	margin-bottom: 20px;
+	margin-top: 40px;
 }
 h1 {
 	font-family: 'ProximaNovaSemiBold';
-  font-size: 32px;
-  font-weight: 400;
-  margin-bottom: 16px;
+	font-size: 32px;
+	font-weight: 400;
+	margin-bottom: 16px;
 }
-
-ul li{
-  margin: 0 0 10px;
+ul li {
+	margin: 0 0 10px;
 }
-ul.navbar-nav  li{ margin:0 !important;}
-
+ul.navbar-nav li {
+	margin: 0 !important;
+}
 </style>
 </head>
 
@@ -120,7 +120,7 @@ ul.navbar-nav  li{ margin:0 !important;}
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       <a class="navbar-brand" href="index.html">ForceGento</a> </div>
-        <div class="navbar-collapse collapse">
+    <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li><a href="features.html">Features</a></li>
         <li><a href="walkthrough.html">Walkthrough</a></li>
@@ -135,141 +135,239 @@ ul.navbar-nav  li{ margin:0 !important;}
     <!--/.nav-collapse --> 
   </div>
 </div>
-
-
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-        <h1>Setup</h1>
-        <!--<hr/>-->
-        <h2>Deploying to Heroku using the Heroku Button</h2>
-
-<p>You can deploy your own version of ForceGento in seconds using the Heroku button below:</p>
-
-<p><a target="_blank" href="https://heroku.com/deploy?template=https://github.com/technomile/B2C-Ecommerce-on-Salesforce-Heroku"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
-
-<h2>Deploying to Heroku using the Command Line</h2>
-
-<p>You can also deploy ForceGento to Heroku using the command line:</p>
-
-<ol>
-<li><p>Clone the repository</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/B2C-Ecommerce-on-Salesforce-Heroku
-</code></pre></div></li>
-<li><p>Create a Heroku application</p>
-<div class="highlight">
-  <pre><code class="language-text" data-lang="text">cd ForceGento
+      <h1>Setup</h1>
+      <!--<hr/>-->
+      <h2>Deploying to Heroku using the Heroku Button</h2>
+      <p>You can deploy your own version of ForceGento in seconds using the Heroku button below:</p>
+      <p><a target="_blank" href="https://heroku.com/deploy?template=https://github.com/technomile/B2C-Ecommerce-on-Salesforce-Heroku"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></p>
+      <h2>Deploying to Heroku using the Command Line</h2>
+      <p>You can also deploy ForceGento to Heroku using the command line:</p>
+      <ol>
+        <li>
+          <p>Clone the repository</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/B2C-Ecommerce-on-Salesforce-Heroku
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Create a Heroku application</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">cd ForceGento
 heroku create
-</code></pre></div></li>
-<li><p>Install the ClearDB plugin    </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add cleardb:ignite
-</code></pre></div></li>
-<li><p>Install the New Relic plugin    </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add newrelic:stark
-</code></pre></div></li>
-<li><p>Install the SendGrid plugin    </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">heroku addons:add sendgrid:starter
-</code></pre></div></li>
-<li><p>Deploy to Heroku</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git push heroku master
-</code></pre></div></li>
-<li><p>Run the the application and complete the magento installation process:</p>
-<ul>
-<li><p>Open the application in a browser:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">heroku open
-</code></pre></div></li>
-<li>
-  <p>Get ClearDB database credentials and add at the time Magento installation:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">heroku config
-</code></pre></div></li>
-<li>
-  <p>Create admin username and password, Email Address and Site name.</p></li>
-</ul></li>
-<li><p>Add the credentials to app/etc/local.xml file.</p></li>
-<li>
-  <p>Click <a href="http://technomile.github.io/forcegento/forcegento-app-exchange.pdf" target="_blank">here</a> for installing and configuring forcegento app using AppExchange.</p>
-  <p>OR</p>
-  <p>Click <a href="http://technomile.github.io/forcegento/forcegento-manage-package.pdf" target="_blank">here</a> for installing and configuring forcegento app using Manage Package.</p>
-</li>
-<li><p>Download the Enterprise and Partner WSDL files from Salesforce org. Copy these files to \lib\soapclient.</p></li>
-<li><p>Push the changes to heroku.</p></li>
-<li><p>To order the licence token key for the API <a href="http://www.forcegento.com/" target="_blank">click here</a>.</p></li>
-</ol>
-
-<h2>Installing a Local Version</h2>
-<p>You can also install Magento on your local machine:</p>
-<ol>
-<li><p>Clone the repository</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/B2C-Ecommerce-on-Salesforce-Heroku
-</code></pre></div></li>
-<li><p>Install the server dependencies</p>
-<div class="highlight">
-  <pre><code class="language-text" data-lang="text">cd ForceGento
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Install the ClearDB plugin </p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">heroku addons:add cleardb:ignite
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Install the New Relic plugin </p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">heroku addons:add newrelic:stark
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Install the SendGrid plugin </p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">heroku addons:add sendgrid:starter
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Deploy to Heroku</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git push heroku master
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Run the the application and complete the magento installation process:</p>
+          <ul>
+            <li>
+              <p>Open the application in a browser:</p>
+              <div class="highlight">
+                <pre><code class="language-text" data-lang="text">heroku open
+</code></pre>
+              </div>
+            </li>
+            <li>
+              <p>Get ClearDB database credentials and add at the time Magento installation:</p>
+              <div class="highlight">
+                <pre><code class="language-text" data-lang="text">heroku config
+</code></pre>
+              </div>
+            </li>
+            <li>
+              <p>Create admin username and password, Email Address and Site name.</p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>Add the credentials to app/etc/local.xml file.</p>
+        </li>
+        <li>
+          <p>Click <a href="http://technomile.github.io/forcegento/forcegento-app-exchange.pdf" target="_blank">here</a> for installing and configuring forcegento app using AppExchange.</p>
+          <p>OR</p>
+          <p>Click <a href="http://technomile.github.io/forcegento/forcegento-manage-package.pdf" target="_blank">here</a> for installing and configuring forcegento app using Manage Package.</p>
+        </li>
+        <li>
+          <p>Download the Enterprise and Partner WSDL files from Salesforce org. Copy these files to \lib\soapclient.</p>
+        </li>
+        <li>
+          <p>Push the changes to heroku.</p>
+        </li>
+        <li>
+          <p>To order the licence token key for the API <a href="http://www.forcegento.com/" target="_blank">click here</a>.</p>
+        </li>
+      </ol>
+      <h2>Installing a Local Version</h2>
+      <p>You can also install Magento on your local machine:</p>
+      <ol>
+        <li>
+          <p>Clone the repository</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git clone https://github.com/technomile/B2C-Ecommerce-on-Salesforce-Heroku
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Install the server dependencies</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">cd ForceGento
 npm install
-</code></pre></div></li>
-<li><p>Create a local database</p>
-
-<ul>
-<li>Install and start MySQL on your local machine</li>
-<li>Create a database called <strong>ForceGento</strong></li>
-</ul></li>
-<li><p>Start the server    </p>
-<div class="highlight">
-  <pre><code class="language-text" data-lang="text">wamp/xampp server
-</code></pre></div></li>
-<li><p>Run the application</p>
-<ul>
-<li>Open a browser and access the following URL:
-<a href="http://localhost:5000">http://localhost</a></li>
-<li>
-  <p>Get local database credentials and add at the time Magento installation:</p></li>
-<li>
-  <p>Create admin username and password, Email Address and Site name.</p></li>
-</ul></li>
-<li>
-  <p>Click <a href="http://technomile.github.io/forcegento/forcegento-app-exchange.pdf" target="_blank">here</a> for installing and configuring forcegento app using AppExchange.</p>
-  <p>OR</p>
-  <p>Click <a href="http://technomile.github.io/forcegento/forcegento-manage-package.pdf" target="_blank">here</a> for installing and configuring forcegento app using Manage Package.</p>
-</li>
-<li><p>Download the Enterprise and Partner WSDL files from Salesforce org. Copy these files to \lib\soapclient.</p></li></ol>
-
-<h2>API configuration in Magento</h2>
-<ol>
-<li><p>Login to Magento admin panel.</p></li>
-<li><p>Create Custom Field in Contact Us form:</p>
-<ul>
-<li>
-  <p>Go to System &gt;&gt; Transactional Emails &gt;&gt; Add New Template</p></li>
-<li><p>Select 'Contact Form' from Template drop down</p></li>
-<li><p>Click on 'Load Template'.</p></li>
-<li><p>Add "Company: {{var data.company}}" in the template content, to add a new Company field in the form.</p></li>
-<li><p>Click on 'Save Template'.</p></li>
-</ul>
-</li>
-<li><p>Configure Salesforce API Extension</p>
-<ul>
-<li>
-  <p>Go to System &gt;&gt; Configuration</p></li>
-<li><p>In 'TechnoMile Salesforce API Extension' section, click on 'Salesforce API Configuration'.</p></li>
-<li><p>Enable the API</p></li>
-<li>
-  <p>Fill Salesforce username, password, token</p></li>
-<li><p>Specify the path of WSDL file.</p></li>
-<li><p>Select the client type (Enterprise, Partner)</p></li>
-<li><p>Click on 'Check Salesforce Connection' button to validate Salesforce connection</p></li>
-<li><p>Enter the license key that you received in your email, to validate the API license</p></li>
-<li><p>Save the configurations.</p></li>
-<li><p>This will connect the magento app to SalesForce through SOAP.</p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Create a local database</p>
+          <ul>
+            <li>Install and start MySQL on your local machine</li>
+            <li>Create a database called <strong>ForceGento</strong></li>
+          </ul>
+        </li>
+        <li>
+          <p>Start the server </p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">wamp/xampp server
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Run the application</p>
+          <ul>
+            <li>Open a browser and access the following URL: <a href="http://localhost:5000">http://localhost</a></li>
+            <li>
+              <p>Get local database credentials and add at the time Magento installation:</p>
+            </li>
+            <li>
+              <p>Create admin username and password, Email Address and Site name.</p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>Click <a href="http://technomile.github.io/forcegento/forcegento-app-exchange.pdf" target="_blank">here</a> for installing and configuring forcegento app using AppExchange.</p>
+          <p>OR</p>
+          <p>Click <a href="http://technomile.github.io/forcegento/forcegento-manage-package.pdf" target="_blank">here</a> for installing and configuring forcegento app using Manage Package.</p>
+        </li>
+        <li>
+          <p>Download the Enterprise and Partner WSDL files from Salesforce org. Copy these files to \lib\soapclient.</p>
+        </li>
+      </ol>
+      <h2>API configuration in Magento</h2>
+      <ol>
+        <li>
+          <p>Login to Magento admin panel.</p>
+        </li>
+        <li>
+          <p>Create Custom Field in Contact Us form:</p>
+          <ul>
+            <li>
+              <p>Go to System &gt;&gt; Transactional Emails &gt;&gt; Add New Template</p>
+            </li>
+            <li>
+              <p>Select 'Contact Form' from Template drop down</p>
+            </li>
+            <li>
+              <p>Click on 'Load Template'.</p>
+            </li>
+            <li>
+              <p>Add "Company: {{var data.company}}" in the template content, to add a new Company field in the form.</p>
+            </li>
+            <li>
+              <p>Click on 'Save Template'.</p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>Configure Salesforce API Extension</p>
+          <ul>
+            <li>
+              <p>Go to System &gt;&gt; Configuration</p>
+            </li>
+            <li>
+              <p>In 'TechnoMile Salesforce API Extension' section, click on 'Salesforce API Configuration'.</p>
+            </li>
+            <li>
+              <p>Enable the API</p>
+            </li>
+            <li>
+              <p>Fill Salesforce username, password, token</p>
+            </li>
+            <li>
+              <p>Specify the path of WSDL file.</p>
+            </li>
+            <li>
+              <p>Select the client type (Enterprise, Partner)</p>
+            </li>
+            <li>
+              <p>Click on 'Check Salesforce Connection' button to validate Salesforce connection</p>
+            </li>
+            <li>
+              <p>Enter the license key that you received in your email, to validate the API license</p>
+            </li>
+            <li>
+              <p>Save the configurations.</p>
+            </li>
+            <li>
+              <p>This will connect the magento app to SalesForce through SOAP.</p>
+            </li>
+          </ul>
+        </li>
+        </ul>
+        </li>
+      </ol>
+      <h2>How to find your AWS Access Key ID and Secret Access Key. How to setup S3 Bucket.</h2>
+      <ol>
+        <li>
+          <p>Go to <strong><a href="https://aws.amazon.com" target="_blank">Amazon Web Services</a></strong> console and click on the name of your account (it is located in the top right corner of the console). Then, in the expanded drop-down list, select <strong>Security Credentials</strong>.</p>
+        </li>
+        <li>
+          <p>Click the <strong>Continue to Security Credentials </strong>button.</p>
+        </li>
+        <li>
+          <p>Expand the Access Keys (Access Key ID and Secret Access Key) option. You will see the list of your active and deleted access keys.<strong> Note:</strong> You cannot retrieve the existing secret key. You can see the secret key only once immediately after creating. So, in order to get a secret key, you will need to create a new one.</p>
+        </li>
+        <li><p>To generate new access keys, click the Create New Access Key button.</p></li>
+        <li>
+          <p>Click <strong>Show Access Key </strong>to have it displayed on the screen. Note, that you can download it to your machine as a file and open it whenever needed. To download it, just click the <strong>Download Key File</strong> button.<strong> Attention!</strong> If you do not write down the key or download the key file to your computer before you press "Close" or "Cancel" you will not be able to retrieve the secret key in future. Then you'll have to delete the keys which you created and start to create new keys.</p>
+        </li>
+        <li><p>Click <a href="http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html" target="_blank">here</a> to learn how to create a S3 bucket on amazon</p></li>
+      </ol>
     </div>
   </div>
 </div>
-
-<div class="container"><hr/></div>
+<div class="container">
+  <hr/>
+</div>
 <div class="container">
   <div id="footer">
     <p class="text-muted">ForceGento, 2015. Powered by <a href="http://www.technomile.com" title="TechnoMile" target="_blank">TechnoMile</a></p>

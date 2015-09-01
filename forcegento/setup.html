@@ -207,12 +207,9 @@ heroku create
               </div>
             </li>
             <li>
-              <p>Create admin username and password, Email Address and Site name.</p>
+              <p>Input values for the admin username, password, Email Address and site name.</p>
             </li>
           </ul>
-        </li>
-        <li>
-          <p>Add the credentials to app/etc/local.xml file. Download sample of local.xml file form <a target="_blank" href="http://technomile.github.io/forcegento/local.xml">here</a>.</p>
         </li>
         <li>
           <p>Click <a href="http://technomile.github.io/forcegento/forcegento-app-exchange.pdf" target="_blank">here</a> for installing and configuring forcegento app using AppExchange.</p>
@@ -220,13 +217,7 @@ heroku create
           <p>Click <a href="http://technomile.github.io/forcegento/forcegento-manage-package.pdf" target="_blank">here</a> for installing and configuring forcegento app using Manage Package.</p>
         </li>
         <li>
-          <p>Download the Enterprise and Partner WSDL files from Salesforce org. Copy these files to \lib\soapclient.</p>
-        </li>
-        <li>
-          <p>Push the changes to heroku.</p>
-        </li>
-        <li>
-          <p>To order the licence token key for the API <a href="http://www.forcegento.com/" target="_blank">click here</a>.</p>
+          <p>Click <a href="http://www.forcegento.com/" target="_blank">here</a> to order the licence token key.</p>
         </li>
       </ol>
       <h2>Installing a Local Version</h2>
@@ -282,6 +273,44 @@ npm install
           <p>Download the Enterprise and Partner WSDL files from Salesforce org. Copy these files to \lib\soapclient.</p>
         </li>
       </ol>
+      
+      <h2>Deploying Magento config file to Heroku using the Command Line</h2>
+      <ol>
+        <li>
+          <p>Clone the repository (If already cloned then cd your APP_NAME and git pull)</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git clone git@heroku.com:YOUR_APP_NAME.git
+</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">cd YOUR_APP_NAME
+</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git pull origin master
+</code></pre>
+          </div>
+        </li>
+        <li>
+          <p>Add the credentials to <strong>app/etc/local.xml</strong> file. Download sample of <strong>local.xml</strong> file form <a target="_blank" href="http://technomile.github.io/forcegento/local.xml">here</a>.</p>
+        </li>
+        <li>
+          <p>Download the Enterprise WSDL file from Salesforce org. Copy these files to <strong>\lib\soapclient</strong>.</p>
+        </li>
+        <li>
+          <p>Deploy to Heroku using these three commands.</p>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git add .</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git commit -m "YOUR_COMMENT"</code></pre>
+          </div>
+          <div class="highlight">
+            <pre><code class="language-text" data-lang="text">git push heroku master</code></pre>
+          </div>
+        </li>
+      </ol>
+      
       <h2>API configuration in Magento</h2>
       <ol>
         <li>

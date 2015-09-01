@@ -369,6 +369,65 @@ npm install
         <li>
           <p>Click <a href="http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html" target="_blank">here</a> to learn how to create a S3 bucket on amazon.</p></li>
       </ol>
+      
+      <h2>Amazon Web Services configuration on Magento</h2>
+      <ol>
+        <li>
+          <p>Login to Magento admin panel.</p>
+        </li>
+        <li>On dashboard:
+          <ul>
+            <li><p>Go to System &gt;&gt; Configuration &gt;&gt; Catalog &gt;&gt; Image CDN</p>
+            <li><p>Under <strong>General Settings</strong> select the following fields.</p>
+                <ul>
+                  	<li><p>Current Adapter as <strong>Amazon S3/CloudFront</strong></p></li>
+                  	<li><p>File Result Cache as <strong>In database (recommended)</strong></p></li>
+                  	<li><p>Cache Time-to-Live as <strong>1440</strong></p></li>
+                  	<li><p>Verify File Size as <strong>Yes</strong></p></li>
+                  	<li><p>Image Compression as <strong>-- Use default --</strong></p></li>
+                </ul>
+            </li>
+            <li><p>Under <strong>Amazon S3/CloudFront</strong> input the following fields.</p>
+              <ul>
+                	<li><p>Input your <strong>Access Key ID</strong></p></li>
+              		<li><p>Input your <strong>Secret Access Key</strong></p></li>
+              		<li><p>Input your <strong>Bucket</strong> name</p></li>
+              		<li><p>Input your <strong>Base URL</strong> Or Input your <strong>Secure Base URL</strong></p></li>
+              </ul>
+            </li>
+            <li>
+              <p>Click on Save Config and you are done.</p>
+            </li>
+          </ul>
+        </li>
+        </ul>
+        </li>
+      </ol>
+      
+      <h2>SendGrid configuration on Magento</h2>
+      <ol>
+        <li>
+          <p>Login to Magento admin panel.</p>
+        </li>
+        <li>On dashboard:
+          <ul>
+            <li><p>Go to System &gt;&gt; Configuration &gt;&gt; Aschroder Extensions &gt;&gt; SMTP Pro</p>
+            <li><p>Under <strong>General Settings</strong> configure your SMTP connection below.</p>
+                <ul>
+                  	<li><p>Select Email Connection as <strong>SendGrid</strong></p></li>
+                  	<li><p>Input your SendGrid Username</p></li>
+                  	<li><p>SendGrid your Password</p></li>
+                </ul>
+            </li>
+            <li>
+              <p>Click on Save Config and you are done.</p>
+            </li>
+          </ul>
+        </li>
+        </ul>
+        </li>
+      </ol>
+      
     </div>
   </div>
 </div>

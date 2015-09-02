@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 /**
  * Magento
@@ -28,7 +28,7 @@
 <config>
     <global>
         <install>
-            <date><![CDATA[Tue, 01 Sep 2015 11:29:23 +0000]]></date>
+            <date><![CDATA[Tue, 02 Sep 2015 11:29:23 +0000]]></date>
         </install>
         <crypt>
             <key><![CDATA[8805bb350e39667a31a5090ed36011e6]]></key>
@@ -40,10 +40,10 @@
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[YOUR_SENDGRID_HOSTNAME]]></host>
-                    <username><![CDATA[YOUR_SENDGRID_USERNAME]]></username>
-                    <password><![CDATA[YOUR_SENDGRID_PASSWORD]]></password>
-                    <dbname><![CDATA[YOUR_SENDGRID_DATABASE]]></dbname>
+                    <host><![CDATA[YOUR_CLEARDB_HOSTNAME]]></host>
+                    <username><![CDATA[YOUR_CLEARDB_USERNAME]]></username>
+                    <password><![CDATA[YOUR_CLEARDB_PASSWORD]]></password>
+                    <dbname><![CDATA[YOUR_CLEARDB_DATABASE]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
                     <type><![CDATA[pdo_mysql]]></type>
